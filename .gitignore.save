@@ -1,0 +1,2397 @@
+Last login: Fri Apr  7 16:19:16 on ttys000
+Albin-CR:test2 albin.git$ l
+-bash: l: command not found
+Albin-CR:test2 albin.git$ s
+-bash: s: command not found
+Albin-CR:test2 albin.git$ ls
+LICENSE			README.md		bower.json		bower_components	gulpfile.babel.js	node_modules		package.json		src
+Albin-CR:test2 albin.git$ cd ..
+Albin-CR:Documents albin.git$ ls
+chacka	housing	test2
+Albin-CR:Documents albin.git$ cd housing/test/
+Albin-CR:test albin.git$ ls
+app.js		bin		package.json	public		routes		views
+Albin-CR:test albin.git$ npm install
+npm WARN deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+npm WARN deprecated transformers@2.1.0: Deprecated, use jstransformer
+test@0.0.0 /Users/albin.git/Documents/housing/test
+├─┬ body-parser@1.17.1 
+│ ├── bytes@2.4.0 
+│ ├── content-type@1.0.2 
+│ ├── debug@2.6.1 
+│ ├── depd@1.1.0 
+│ ├─┬ http-errors@1.6.1 
+│ │ └── inherits@2.0.3 
+│ ├── iconv-lite@0.4.15 
+│ ├─┬ on-finished@2.3.0 
+│ │ └── ee-first@1.1.1 
+│ ├── qs@6.4.0 
+│ ├─┬ raw-body@2.2.0 
+│ │ └── unpipe@1.0.0 
+│ └─┬ type-is@1.6.15 
+│   ├── media-typer@0.3.0 
+│   └─┬ mime-types@2.1.15 
+│     └── mime-db@1.27.0 
+├─┬ cookie-parser@1.4.3 
+│ ├── cookie@0.3.1 
+│ └── cookie-signature@1.0.6 
+├─┬ debug@2.6.3 
+│ └── ms@0.7.2 
+├─┬ express@4.15.2 
+│ ├─┬ accepts@1.3.3 
+│ │ └── negotiator@0.6.1 
+│ ├── array-flatten@1.1.1 
+│ ├── content-disposition@0.5.2 
+│ ├── debug@2.6.1 
+│ ├── encodeurl@1.0.1 
+│ ├── escape-html@1.0.3 
+│ ├── etag@1.8.0 
+│ ├── finalhandler@1.0.1 
+│ ├── fresh@0.5.0 
+│ ├── merge-descriptors@1.0.1 
+│ ├── methods@1.1.2 
+│ ├── parseurl@1.3.1 
+│ ├── path-to-regexp@0.1.7 
+│ ├─┬ proxy-addr@1.1.4 
+│ │ ├── forwarded@0.1.0 
+│ │ └── ipaddr.js@1.3.0 
+│ ├── range-parser@1.2.0 
+│ ├─┬ send@0.15.1 
+│ │ ├── debug@2.6.1 
+│ │ ├── destroy@1.0.4 
+│ │ └── mime@1.3.4 
+│ ├── serve-static@1.12.1 
+│ ├── setprototypeof@1.0.3 
+│ ├── statuses@1.3.1 
+│ ├── utils-merge@1.0.0 
+│ └── vary@1.1.1 
+├─┬ jade@1.11.0 
+│ ├── character-parser@1.2.1 
+│ ├─┬ clean-css@3.4.25 
+│ │ ├─┬ commander@2.8.1 
+│ │ │ └── graceful-readlink@1.0.1 
+│ │ └─┬ source-map@0.4.4 
+│ │   └── amdefine@1.0.1 
+│ ├── commander@2.6.0 
+│ ├─┬ constantinople@3.0.2 
+│ │ └── acorn@2.7.0 
+│ ├─┬ jstransformer@0.0.2 
+│ │ ├── is-promise@2.1.0 
+│ │ └─┬ promise@6.1.0 
+│ │   └── asap@1.0.0 
+│ ├─┬ mkdirp@0.5.1 
+│ │ └── minimist@0.0.8 
+│ ├─┬ transformers@2.1.0 
+│ │ ├─┬ css@1.0.8 
+│ │ │ ├── css-parse@1.0.4 
+│ │ │ └── css-stringify@1.0.5 
+│ │ ├─┬ promise@2.0.0 
+│ │ │ └── is-promise@1.0.1 
+│ │ └─┬ uglify-js@2.2.5 
+│ │   ├─┬ optimist@0.3.7 
+│ │   │ └── wordwrap@0.0.3 
+│ │   └── source-map@0.1.43 
+│ ├─┬ uglify-js@2.8.21 
+│ │ ├── source-map@0.5.6 
+│ │ ├── uglify-to-browserify@1.0.2 
+│ │ └─┬ yargs@3.10.0 
+│ │   ├── camelcase@1.2.1 
+│ │   ├─┬ cliui@2.1.0 
+│ │   │ ├─┬ center-align@0.1.3 
+│ │   │ │ ├─┬ align-text@0.1.4 
+│ │   │ │ │ ├─┬ kind-of@3.1.0 
+│ │   │ │ │ │ └── is-buffer@1.1.5 
+│ │   │ │ │ ├── longest@1.0.1 
+│ │   │ │ │ └── repeat-string@1.6.1 
+│ │   │ │ └── lazy-cache@1.0.4 
+│ │   │ ├── right-align@0.1.3 
+│ │   │ └── wordwrap@0.0.2 
+│ │   ├── decamelize@1.2.0 
+│ │   └── window-size@0.1.0 
+│ ├── void-elements@2.0.1 
+│ └─┬ with@4.0.3 
+│   ├── acorn@1.2.2 
+│   └── acorn-globals@1.0.9 
+├─┬ morgan@1.8.1 
+│ ├── basic-auth@1.1.0 
+│ ├── debug@2.6.1 
+│ └── on-headers@1.0.1 
+└─┬ serve-favicon@2.4.2 
+  └── ms@1.0.0 
+
+Albin-CR:test albin.git$ nodemon
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node ./bin/www`
+^X^CAlbin-CR:test albin.git$ nodemon
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node ./bin/www`
+/Users/albin.git/Documents/housing/test/app.js:1
+(function (exports, require, module, __filename, __dirname) { import express from 'express'
+                                                              ^^^^^^
+SyntaxError: Unexpected token import
+    at Object.exports.runInThisContext (vm.js:73:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/albin.git/Documents/housing/test/bin/www:7:11)
+    at Module._compile (module.js:571:32)
+[nodemon] app crashed - waiting for file changes before starting...
+^CAlbin-CR:test albin.git$ nodemon
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node ./bin/www`
+^CAlbin-CR:test albin.git$ node --v8-options | grep harmony 
+  --es_staging (enable test-worthy harmony features (for internal use only))
+  --harmony (enable all completed harmony features)
+  --harmony_shipping (enable all shipped harmony features)
+  --harmony_array_prototype_values (enable "harmony Array.prototype.values" (in progress))
+  --harmony_function_sent (enable "harmony function.sent" (in progress))
+  --harmony_sharedarraybuffer (enable "harmony sharedarraybuffer" (in progress))
+  --harmony_simd (enable "harmony simd" (in progress))
+  --harmony_explicit_tailcalls (enable "harmony explicit tail calls" (in progress))
+  --harmony_do_expressions (enable "harmony do-expressions" (in progress))
+  --harmony_restrictive_generators (enable "harmony restrictions on generator declarations" (in progress))
+  --harmony_regexp_named_captures (enable "harmony regexp named captures" (in progress))
+  --harmony_regexp_property (enable "harmony unicode regexp property classes" (in progress))
+  --harmony_for_in (enable "harmony for-in syntax" (in progress))
+  --harmony_trailing_commas (enable "harmony trailing commas in function parameter lists" (in progress))
+  --harmony_regexp_lookbehind (enable "harmony regexp lookbehind")
+  --harmony_tailcalls (enable "harmony tail calls")
+  --harmony_async_await (enable "harmony async-await")
+  --harmony_string_padding (enable "harmony String-padding methods")
+  --harmony_restrictive_declarations (enable "harmony limitations on sloppy mode function declarations")
+  --harmony_object_values_entries (enable "harmony Object.values / Object.entries")
+  --harmony_object_own_property_descriptors (enable "harmony Object.getOwnPropertyDescriptors()")
+Albin-CR:test albin.git$ node --v8-options 
+SSE3=1 SSE4_1=1 SAHF=1 AVX=1 FMA3=1 BMI1=1 BMI2=1 LZCNT=1 POPCNT=1 ATOM=0
+Usage:
+  shell [options] -e string
+    execute string in V8
+  shell [options] file1 file2 ... filek
+    run JavaScript scripts in file1, file2, ..., filek
+  shell [options]
+  shell [options] --shell [file1 file2 ... filek]
+    run an interactive JavaScript shell
+  d8 [options] file1 file2 ... filek
+  d8 [options]
+  d8 [options] --shell [file1 file2 ... filek]
+    run the new debugging shell
+
+Options:
+  --experimental_extras (enable code compiled in via v8_experimental_extra_library_files)
+        type: bool  default: false
+  --use_strict (enforce strict mode)
+        type: bool  default: false
+  --es_staging (enable test-worthy harmony features (for internal use only))
+        type: bool  default: false
+  --harmony (enable all completed harmony features)
+        type: bool  default: false
+  --harmony_shipping (enable all shipped harmony features)
+        type: bool  default: true
+  --intl_extra (additional V8 Intl functions)
+        type: bool  default: false
+  --harmony_array_prototype_values (enable "harmony Array.prototype.values" (in progress))
+        type: bool  default: false
+  --harmony_function_sent (enable "harmony function.sent" (in progress))
+        type: bool  default: false
+  --harmony_sharedarraybuffer (enable "harmony sharedarraybuffer" (in progress))
+        type: bool  default: false
+  --harmony_simd (enable "harmony simd" (in progress))
+        type: bool  default: false
+  --harmony_explicit_tailcalls (enable "harmony explicit tail calls" (in progress))
+        type: bool  default: false
+  --harmony_do_expressions (enable "harmony do-expressions" (in progress))
+        type: bool  default: false
+  --harmony_restrictive_generators (enable "harmony restrictions on generator declarations" (in progress))
+        type: bool  default: false
+  --harmony_regexp_named_captures (enable "harmony regexp named captures" (in progress))
+        type: bool  default: false
+  --harmony_regexp_property (enable "harmony unicode regexp property classes" (in progress))
+        type: bool  default: false
+  --harmony_for_in (enable "harmony for-in syntax" (in progress))
+        type: bool  default: false
+  --harmony_trailing_commas (enable "harmony trailing commas in function parameter lists" (in progress))
+        type: bool  default: false
+  --harmony_regexp_lookbehind (enable "harmony regexp lookbehind")
+        type: bool  default: false
+  --harmony_tailcalls (enable "harmony tail calls")
+        type: bool  default: false
+  --harmony_async_await (enable "harmony async-await")
+        type: bool  default: false
+  --harmony_string_padding (enable "harmony String-padding methods")
+        type: bool  default: false
+  --icu_case_mapping (enable "case mapping with ICU rather than Unibrow")
+        type: bool  default: true
+  --harmony_restrictive_declarations (enable "harmony limitations on sloppy mode function declarations")
+        type: bool  default: true
+  --harmony_object_values_entries (enable "harmony Object.values / Object.entries")
+        type: bool  default: true
+  --harmony_object_own_property_descriptors (enable "harmony Object.getOwnPropertyDescriptors()")
+        type: bool  default: true
+  --compiled_keyed_generic_loads (use optimizing compiler to generate keyed generic load stubs)
+        type: bool  default: false
+  --allocation_site_pretenuring (pretenure with allocation sites)
+        type: bool  default: true
+  --page_promotion (promote pages based on utilization)
+        type: bool  default: true
+  --page_promotion_threshold (min percentage of live bytes on a page to enable fast evacuation)
+        type: int  default: 70
+  --trace_pretenuring (trace pretenuring decisions of HAllocate instructions)
+        type: bool  default: false
+  --trace_pretenuring_statistics (trace allocation site pretenuring statistics)
+        type: bool  default: false
+  --track_fields (track fields with only smi values)
+        type: bool  default: true
+  --track_double_fields (track fields with double values)
+        type: bool  default: true
+  --track_heap_object_fields (track fields with heap values)
+        type: bool  default: true
+  --track_computed_fields (track computed boilerplate fields)
+        type: bool  default: true
+  --track_field_types (track field types)
+        type: bool  default: true
+  --smi_binop (support smi representation in binary operations)
+        type: bool  default: true
+  --optimize_for_size (Enables optimizations which favor memory size over execution speed)
+        type: bool  default: false
+  --unbox_double_arrays (automatically unbox arrays of doubles)
+        type: bool  default: true
+  --string_slices (use string slices)
+        type: bool  default: true
+  --ignition (use ignition interpreter)
+        type: bool  default: false
+  --ignition_staging (use ignition with all staged features)
+        type: bool  default: false
+  --ignition_eager (eagerly compile and parse with ignition)
+        type: bool  default: false
+  --ignition_filter (filter for ignition interpreter)
+        type: string  default: *
+  --ignition_deadcode (use ignition dead code elimination optimizer)
+        type: bool  default: true
+  --ignition_osr (enable support for OSR from ignition code)
+        type: bool  default: false
+  --ignition_peephole (use ignition peephole optimizer)
+        type: bool  default: true
+  --ignition_reo (use ignition register equivalence optimizer)
+        type: bool  default: true
+  --ignition_filter_expression_positions (filter expression positions before the bytecode pipeline)
+        type: bool  default: true
+  --ignition_preserve_bytecode (preserve generated bytecode even when switching tiers)
+        type: bool  default: false
+  --print_bytecode (print bytecode generated by ignition interpreter)
+        type: bool  default: false
+  --trace_ignition (trace the bytecodes executed by the ignition interpreter)
+        type: bool  default: false
+  --trace_ignition_codegen (trace the codegen of ignition interpreter bytecode handlers)
+        type: bool  default: false
+  --trace_ignition_dispatches (traces the dispatches to bytecode handlers by the ignition interpreter)
+        type: bool  default: false
+  --trace_ignition_dispatches_output_file (the file to which the bytecode handler dispatch table is written (by default, the table is not written to a file))
+        type: string  default: NULL
+  --crankshaft (use crankshaft)
+        type: bool  default: true
+  --hydrogen_filter (optimization filter)
+        type: string  default: *
+  --use_gvn (use hydrogen global value numbering)
+        type: bool  default: true
+  --gvn_iterations (maximum number of GVN fix-point iterations)
+        type: int  default: 3
+  --use_canonicalizing (use hydrogen instruction canonicalizing)
+        type: bool  default: true
+  --use_inlining (use function inlining)
+        type: bool  default: true
+  --use_escape_analysis (use hydrogen escape analysis)
+        type: bool  default: true
+  --use_allocation_folding (use allocation folding)
+        type: bool  default: true
+  --use_local_allocation_folding (only fold in basic blocks)
+        type: bool  default: false
+  --use_write_barrier_elimination (eliminate write barriers targeting allocations in optimized code)
+        type: bool  default: true
+  --max_inlining_levels (maximum number of inlining levels)
+        type: int  default: 5
+  --max_inlined_source_size (maximum source size in bytes considered for a single inlining)
+        type: int  default: 600
+  --max_inlined_nodes (maximum number of AST nodes considered for a single inlining)
+        type: int  default: 196
+  --max_inlined_nodes_cumulative (maximum cumulative number of AST nodes considered for inlining)
+        type: int  default: 400
+  --loop_invariant_code_motion (loop invariant code motion)
+        type: bool  default: true
+  --fast_math (faster (but maybe less accurate) math functions)
+        type: bool  default: true
+  --collect_megamorphic_maps_from_stub_cache (crankshaft harvests type feedback from stub cache)
+        type: bool  default: false
+  --hydrogen_stats (print statistics for hydrogen)
+        type: bool  default: false
+  --trace_check_elimination (trace check elimination phase)
+        type: bool  default: false
+  --trace_environment_liveness (trace liveness of local variable slots)
+        type: bool  default: false
+  --trace_hydrogen (trace generated hydrogen to file)
+        type: bool  default: false
+  --trace_hydrogen_filter (hydrogen tracing filter)
+        type: string  default: *
+  --trace_hydrogen_stubs (trace generated hydrogen for stubs)
+        type: bool  default: false
+  --trace_hydrogen_file (trace hydrogen to given file name)
+        type: string  default: NULL
+  --trace_phase (trace generated IR for specified phases)
+        type: string  default: HLZ
+  --trace_inlining (trace inlining decisions)
+        type: bool  default: false
+  --trace_load_elimination (trace load elimination)
+        type: bool  default: false
+  --trace_store_elimination (trace store elimination)
+        type: bool  default: false
+  --turbo_verify_store_elimination (verify store elimination more rigorously)
+        type: bool  default: false
+  --trace_alloc (trace register allocator)
+        type: bool  default: false
+  --trace_all_uses (trace all use positions)
+        type: bool  default: false
+  --trace_range (trace range analysis)
+        type: bool  default: false
+  --trace_gvn (trace global value numbering)
+        type: bool  default: false
+  --trace_representation (trace representation types)
+        type: bool  default: false
+  --trace_removable_simulates (trace removable simulates)
+        type: bool  default: false
+  --trace_escape_analysis (trace hydrogen escape analysis)
+        type: bool  default: false
+  --trace_allocation_folding (trace allocation folding)
+        type: bool  default: false
+  --trace_track_allocation_sites (trace the tracking of allocation sites)
+        type: bool  default: false
+  --trace_migration (trace object migration)
+        type: bool  default: false
+  --trace_generalization (trace map generalization)
+        type: bool  default: false
+  --stress_pointer_maps (pointer map for every instruction)
+        type: bool  default: false
+  --stress_environments (environment for every instruction)
+        type: bool  default: false
+  --deopt_every_n_times (deoptimize every n times a deopt point is passed)
+        type: int  default: 0
+  --deopt_every_n_garbage_collections (deoptimize every n garbage collections)
+        type: int  default: 0
+  --print_deopt_stress (print number of possible deopt points)
+        type: bool  default: false
+  --trap_on_deopt (put a break point before deoptimizing)
+        type: bool  default: false
+  --trap_on_stub_deopt (put a break point before deoptimizing a stub)
+        type: bool  default: false
+  --deoptimize_uncommon_cases (deoptimize uncommon cases)
+        type: bool  default: true
+  --polymorphic_inlining (polymorphic inlining)
+        type: bool  default: true
+  --use_osr (use on-stack replacement)
+        type: bool  default: true
+  --array_bounds_checks_elimination (perform array bounds checks elimination)
+        type: bool  default: true
+  --trace_bce (trace array bounds check elimination)
+        type: bool  default: false
+  --array_index_dehoisting (perform array index dehoisting)
+        type: bool  default: true
+  --analyze_environment_liveness (analyze liveness of environment slots and zap dead values)
+        type: bool  default: true
+  --load_elimination (use load elimination)
+        type: bool  default: true
+  --check_elimination (use check elimination)
+        type: bool  default: true
+  --store_elimination (use store elimination)
+        type: bool  default: false
+  --dead_code_elimination (use dead code elimination)
+        type: bool  default: true
+  --fold_constants (use constant folding)
+        type: bool  default: true
+  --trace_dead_code_elimination (trace dead code elimination)
+        type: bool  default: false
+  --unreachable_code_elimination (eliminate unreachable code)
+        type: bool  default: true
+  --trace_osr (trace on-stack replacement)
+        type: bool  default: false
+  --stress_runs (number of stress runs)
+        type: int  default: 0
+  --lookup_sample_by_shared (when picking a function to optimize, watch for shared function info, not JSFunction itself)
+        type: bool  default: true
+  --flush_optimized_code_cache (flushes the cache of optimized code for closures on every GC)
+        type: bool  default: false
+  --inline_construct (inline constructor calls)
+        type: bool  default: true
+  --inline_arguments (inline functions with arguments object)
+        type: bool  default: true
+  --inline_accessors (inline JavaScript accessors)
+        type: bool  default: true
+  --escape_analysis_iterations (maximum number of escape analysis fix-point iterations)
+        type: int  default: 2
+  --concurrent_recompilation (optimizing hot functions asynchronously on a separate thread)
+        type: bool  default: true
+  --trace_concurrent_recompilation (track concurrent recompilation)
+        type: bool  default: false
+  --concurrent_recompilation_queue_length (the length of the concurrent compilation queue)
+        type: int  default: 8
+  --concurrent_recompilation_delay (artificial compilation delay in ms)
+        type: int  default: 0
+  --block_concurrent_recompilation (block queued jobs until released)
+        type: bool  default: false
+  --omit_map_checks_for_leaf_maps (do not emit check maps for constant values that have a leaf map, deoptimize the optimized code if the layout of the maps changes.)
+        type: bool  default: true
+  --turbo (enable TurboFan compiler)
+        type: bool  default: false
+  --turbo_from_bytecode (enable building graphs from bytecode)
+        type: bool  default: false
+  --turbo_sp_frame_access (use stack pointer-relative access to frame wherever possible)
+        type: bool  default: false
+  --turbo_preprocess_ranges (run pre-register allocation heuristics)
+        type: bool  default: true
+  --turbo_loop_stackcheck (enable stack checks in loops)
+        type: bool  default: true
+  --turbo_filter (optimization filter for TurboFan compiler)
+        type: string  default: ~~
+  --trace_turbo (trace generated TurboFan IR)
+        type: bool  default: false
+  --trace_turbo_graph (trace generated TurboFan graphs)
+        type: bool  default: false
+  --trace_turbo_cfg_file (trace turbo cfg graph (for C1 visualizer) to a given file name)
+        type: string  default: NULL
+  --trace_turbo_types (trace TurboFan's types)
+        type: bool  default: true
+  --trace_turbo_scheduler (trace TurboFan's scheduler)
+        type: bool  default: false
+  --trace_turbo_reduction (trace TurboFan's various reducers)
+        type: bool  default: false
+  --trace_turbo_trimming (trace TurboFan's graph trimmer)
+        type: bool  default: false
+  --trace_turbo_jt (trace TurboFan's jump threading)
+        type: bool  default: false
+  --trace_turbo_ceq (trace TurboFan's control equivalence)
+        type: bool  default: false
+  --trace_turbo_loop (trace TurboFan's loop optimizations)
+        type: bool  default: false
+  --turbo_asm (enable TurboFan for asm.js code)
+        type: bool  default: true
+  --turbo_asm_deoptimization (enable deoptimization in TurboFan for asm.js code)
+        type: bool  default: false
+  --turbo_verify (verify TurboFan graphs at each phase)
+        type: bool  default: false
+  --turbo_stats (print TurboFan statistics)
+        type: bool  default: false
+  --turbo_stats_nvp (print TurboFan statistics in machine-readable format)
+        type: bool  default: false
+  --turbo_splitting (split nodes during scheduling in TurboFan)
+        type: bool  default: true
+  --turbo_type_feedback (use typed feedback for representation inference in Turbofan)
+        type: bool  default: true
+  --turbo_source_positions (track source code positions when building TurboFan IR)
+        type: bool  default: false
+  --function_context_specialization (enable function context specialization in TurboFan)
+        type: bool  default: false
+  --native_context_specialization (enable native context specialization in TurboFan)
+        type: bool  default: true
+  --turbo_inlining (enable inlining in TurboFan)
+        type: bool  default: true
+  --trace_turbo_inlining (trace TurboFan inlining)
+        type: bool  default: false
+  --turbo_load_elimination (enable load elimination in TurboFan)
+        type: bool  default: true
+  --trace_turbo_load_elimination (trace TurboFan load elimination)
+        type: bool  default: false
+  --loop_assignment_analysis (perform loop assignment analysis)
+        type: bool  default: true
+  --turbo_profiling (enable profiling in TurboFan)
+        type: bool  default: false
+  --turbo_verify_allocation (verify register allocation in TurboFan)
+        type: bool  default: false
+  --turbo_move_optimization (optimize gap moves in TurboFan)
+        type: bool  default: true
+  --turbo_jt (enable jump threading in TurboFan)
+        type: bool  default: true
+  --turbo_stress_loop_peeling (stress loop peeling optimization)
+        type: bool  default: false
+  --turbo_loop_peeling (Turbofan loop peeling)
+        type: bool  default: false
+  --turbo_loop_variable (Turbofan loop variable optimization)
+        type: bool  default: true
+  --turbo_cf_optimization (optimize control flow in TurboFan)
+        type: bool  default: true
+  --turbo_frame_elision (elide frames in TurboFan)
+        type: bool  default: true
+  --turbo_cache_shared_code (cache context-independent code)
+        type: bool  default: true
+  --turbo_preserve_shared_code (keep context-independent code)
+        type: bool  default: false
+  --turbo_escape (enable escape analysis)
+        type: bool  default: false
+  --turbo_instruction_scheduling (enable instruction scheduling in TurboFan)
+        type: bool  default: false
+  --turbo_stress_instruction_scheduling (randomly schedule instructions to stress dependency tracking)
+        type: bool  default: false
+  --turbo_store_elimination (enable store-store elimination in TurboFan)
+        type: bool  default: false
+  --minimal (simplifies execution model to make porting easier (e.g. always use Ignition, never use Crankshaft)
+        type: bool  default: false
+  --expose_wasm (expose WASM interface to JavaScript)
+        type: bool  default: false
+  --wasm_num_compilation_tasks (number of parallel compilation tasks for wasm)
+        type: int  default: 10
+  --trace_wasm_encoder (trace encoding of wasm code)
+        type: bool  default: false
+  --trace_wasm_decoder (trace decoding of wasm code)
+        type: bool  default: false
+  --trace_wasm_decode_time (trace decoding time of wasm code)
+        type: bool  default: false
+  --trace_wasm_compiler (trace compiling of wasm code)
+        type: bool  default: false
+  --trace_wasm_interpreter (trace interpretation of wasm code)
+        type: bool  default: false
+  --trace_wasm_ast_start (start function for WASM AST trace (inclusive))
+        type: int  default: 0
+  --trace_wasm_ast_end (end function for WASM AST trace (exclusive))
+        type: int  default: 0
+  --skip_compiling_wasm_funcs (start compiling at function N)
+        type: int  default: 0
+  --wasm_break_on_decoder_error (debug break when wasm decoder encounters an error)
+        type: bool  default: false
+  --wasm_loop_assignment_analysis (perform loop assignment analysis for WASM)
+        type: bool  default: true
+  --validate_asm (validate asm.js modules before compiling)
+        type: bool  default: false
+  --dump_wasm_module (dump WASM module bytes)
+        type: bool  default: false
+  --dump_wasm_module_path (directory to dump wasm modules to)
+        type: string  default: NULL
+  --typed_array_max_size_in_heap (threshold for in-heap typed array)
+        type: int  default: 64
+  --wasm_simd_prototype (enable prototype simd opcodes for wasm)
+        type: bool  default: false
+  --wasm_eh_prototype (enable prototype exception handling opcodes for wasm)
+        type: bool  default: false
+  --frame_count (number of stack frames inspected by the profiler)
+        type: int  default: 1
+  --interrupt_budget (execution budget before interrupt is triggered)
+        type: int  default: 6144
+  --type_info_threshold (percentage of ICs that must have type info to allow optimization)
+        type: int  default: 25
+  --generic_ic_threshold (max percentage of megamorphic/generic ICs to allow optimization)
+        type: int  default: 30
+  --self_opt_count (call count before self-optimization)
+        type: int  default: 130
+  --trace_opt_verbose (extra verbose compilation tracing)
+        type: bool  default: false
+  --debug_code (generate extra code (assertions) for debugging)
+        type: bool  default: false
+  --code_comments (emit comments in code disassembly)
+        type: bool  default: false
+  --enable_sse3 (enable use of SSE3 instructions if available)
+        type: bool  default: true
+  --enable_sse4_1 (enable use of SSE4.1 instructions if available)
+        type: bool  default: true
+  --enable_sahf (enable use of SAHF instruction if available (X64 only))
+        type: bool  default: true
+  --enable_avx (enable use of AVX instructions if available)
+        type: bool  default: true
+  --enable_fma3 (enable use of FMA3 instructions if available)
+        type: bool  default: true
+  --enable_bmi1 (enable use of BMI1 instructions if available)
+        type: bool  default: true
+  --enable_bmi2 (enable use of BMI2 instructions if available)
+        type: bool  default: true
+  --enable_lzcnt (enable use of LZCNT instruction if available)
+        type: bool  default: true
+  --enable_popcnt (enable use of POPCNT instruction if available)
+        type: bool  default: true
+  --enable_vfp3 (enable use of VFP3 instructions if available)
+        type: bool  default: true
+  --enable_armv7 (enable use of ARMv7 instructions if available (ARM only))
+        type: bool  default: true
+  --enable_armv8 (enable use of ARMv8 instructions if available (ARM 32-bit only))
+        type: bool  default: true
+  --enable_neon (enable use of NEON instructions if available (ARM only))
+        type: bool  default: true
+  --enable_sudiv (enable use of SDIV and UDIV instructions if available (ARM only))
+        type: bool  default: true
+  --enable_movw_movt (enable loading 32-bit constant by means of movw/movt instruction pairs (ARM only))
+        type: bool  default: false
+  --enable_32dregs (enable use of d16-d31 registers on ARM - this requires VFP3)
+        type: bool  default: true
+  --enable_vldr_imm (enable use of constant pools for double immediate (ARM only))
+        type: bool  default: false
+  --force_long_branches (force all emitted branches to be in long mode (MIPS/PPC only))
+        type: bool  default: false
+  --mcpu (enable optimization for specific cpu)
+        type: string  default: auto
+  --enable_regexp_unaligned_accesses (enable unaligned accesses for the regexp engine)
+        type: bool  default: true
+  --expose_natives_as (expose natives in global object)
+        type: string  default: NULL
+  --expose_debug_as (expose debug in global object)
+        type: string  default: NULL
+  --expose_free_buffer (expose freeBuffer extension)
+        type: bool  default: false
+  --expose_gc (expose gc extension)
+        type: bool  default: false
+  --expose_gc_as (expose gc extension under the specified name)
+        type: string  default: NULL
+  --expose_externalize_string (expose externalize string extension)
+        type: bool  default: false
+  --expose_trigger_failure (expose trigger-failure extension)
+        type: bool  default: false
+  --stack_trace_limit (number of stack frames to capture)
+        type: int  default: 10
+  --builtins_in_stack_traces (show built-in functions in stack traces)
+        type: bool  default: false
+  --allow_unsafe_function_constructor (allow invoking the function constructor without security checks)
+        type: bool  default: false
+  --inline_new (use fast inline allocation)
+        type: bool  default: true
+  --trace_codegen (print name of functions for which code is generated)
+        type: bool  default: false
+  --trace (trace function calls)
+        type: bool  default: false
+  --mask_constants_with_cookie (use random jit cookie to mask large constants)
+        type: bool  default: true
+  --lazy (use lazy compilation)
+        type: bool  default: true
+  --trace_opt (trace lazy optimization)
+        type: bool  default: false
+  --trace_opt_stats (trace lazy optimization statistics)
+        type: bool  default: false
+  --trace_file_names (include file names in trace-opt/trace-deopt output)
+        type: bool  default: false
+  --opt (use adaptive optimizations)
+        type: bool  default: true
+  --always_opt (always try to optimize functions)
+        type: bool  default: false
+  --always_osr (always try to OSR functions)
+        type: bool  default: false
+  --prepare_always_opt (prepare for turning on always opt)
+        type: bool  default: false
+  --trace_deopt (trace optimize function deoptimization)
+        type: bool  default: false
+  --trace_stub_failures (trace deoptimization of generated code stubs)
+        type: bool  default: false
+  --serialize_toplevel (enable caching of toplevel scripts)
+        type: bool  default: true
+  --serialize_eager (compile eagerly when caching scripts)
+        type: bool  default: false
+  --serialize_age_code (pre age code in the code cache)
+        type: bool  default: false
+  --trace_serializer (print code serializer trace)
+        type: bool  default: false
+  --min_preparse_length (minimum length for automatic enable preparsing)
+        type: int  default: 1024
+  --max_opt_count (maximum number of optimization attempts before giving up.)
+        type: int  default: 10
+  --compilation_cache (enable compilation cache)
+        type: bool  default: true
+  --cache_prototype_transitions (cache prototype transitions)
+        type: bool  default: true
+  --cpu_profiler_sampling_interval (CPU profiler sampling interval in microseconds)
+        type: int  default: 1000
+  --trace_js_array_abuse (trace out-of-bounds accesses to JS arrays)
+        type: bool  default: false
+  --trace_external_array_abuse (trace out-of-bounds-accesses to external arrays)
+        type: bool  default: false
+  --trace_array_abuse (trace out-of-bounds accesses to all arrays)
+        type: bool  default: false
+  --trace_debug_json (trace debugging JSON request/response)
+        type: bool  default: false
+  --enable_liveedit (enable liveedit experimental feature)
+        type: bool  default: true
+  --hard_abort (abort by crashing)
+        type: bool  default: true
+  --stack_size (default size of stack region v8 is allowed to use (in kBytes))
+        type: int  default: 984
+  --max_stack_trace_source_length (maximum length of function source code printed in a stack trace.)
+        type: int  default: 300
+  --always_inline_smi_code (always inline smi code in non-opt code)
+        type: bool  default: false
+  --verify_operand_stack_depth (emit debug code that verifies the static tracking of the operand stack depth)
+        type: bool  default: false
+  --min_semi_space_size (min size of a semi-space (in MBytes), the new space consists of twosemi-spaces)
+        type: int  default: 0
+  --max_semi_space_size (max size of a semi-space (in MBytes), the new space consists of twosemi-spaces)
+        type: int  default: 0
+  --semi_space_growth_factor (factor by which to grow the new space)
+        type: int  default: 2
+  --experimental_new_space_growth_heuristic (Grow the new space based on the percentage of survivors instead of their absolute value.)
+        type: bool  default: false
+  --max_old_space_size (max size of the old space (in Mbytes))
+        type: int  default: 0
+  --initial_old_space_size (initial old space size (in Mbytes))
+        type: int  default: 0
+  --max_executable_size (max size of executable memory (in Mbytes))
+        type: int  default: 0
+  --gc_global (always perform global GCs)
+        type: bool  default: false
+  --gc_interval (garbage collect after <n> allocations)
+        type: int  default: -1
+  --retain_maps_for_n_gc (keeps maps alive for <n> old space garbage collections)
+        type: int  default: 2
+  --trace_gc (print one trace line following each garbage collection)
+        type: bool  default: false
+  --trace_gc_nvp (print one detailed trace line in name=value format after each garbage collection)
+        type: bool  default: false
+  --trace_gc_ignore_scavenger (do not print trace line after scavenger collection)
+        type: bool  default: false
+  --trace_idle_notification (print one trace line following each idle notification)
+        type: bool  default: false
+  --trace_idle_notification_verbose (prints the heap state used by the idle notification)
+        type: bool  default: false
+  --print_cumulative_gc_stat (print cumulative GC statistics in name=value format on exit)
+        type: bool  default: false
+  --print_max_heap_committed (print statistics of the maximum memory committed for the heap in name=value format on exit)
+        type: bool  default: false
+  --trace_gc_verbose (print more details following each garbage collection)
+        type: bool  default: false
+  --trace_allocation_stack_interval (print stack trace after <n> free-list allocations)
+        type: int  default: -1
+  --trace_fragmentation (report fragmentation for old space)
+        type: bool  default: false
+  --trace_fragmentation_verbose (report fragmentation for old space (detailed))
+        type: bool  default: false
+  --trace_evacuation (report evacuation statistics)
+        type: bool  default: false
+  --trace_mutator_utilization (print mutator utilization, allocation speed, gc speed)
+        type: bool  default: false
+  --weak_embedded_maps_in_optimized_code (make maps embedded in optimized code weak)
+        type: bool  default: true
+  --weak_embedded_objects_in_optimized_code (make objects embedded in optimized code weak)
+        type: bool  default: true
+  --flush_code (flush code that we expect not to use again)
+        type: bool  default: true
+  --trace_code_flushing (trace code flushing progress)
+        type: bool  default: false
+  --age_code (track un-executed functions to age code and flush only old code (required for code flushing))
+        type: bool  default: true
+  --incremental_marking (use incremental marking)
+        type: bool  default: true
+  --incremental_marking_wrappers (use incremental marking for marking wrappers)
+        type: bool  default: true
+  --min_progress_during_incremental_marking_finalization (keep finalizing incremental marking as long as we discover at least this many unmarked objects)
+        type: int  default: 32
+  --max_incremental_marking_finalization_rounds (at most try this many times to finalize incremental marking)
+        type: int  default: 3
+  --black_allocation (use black allocation)
+        type: bool  default: false
+  --concurrent_sweeping (use concurrent sweeping)
+        type: bool  default: true
+  --parallel_compaction (use parallel compaction)
+        type: bool  default: true
+  --parallel_pointer_update (use parallel pointer update during compaction)
+        type: bool  default: true
+  --trace_incremental_marking (trace progress of the incremental marking)
+        type: bool  default: false
+  --track_gc_object_stats (track object counts and memory usage)
+        type: bool  default: false
+  --trace_gc_object_stats (trace object counts and memory usage)
+        type: bool  default: false
+  --track_detached_contexts (track native contexts that are expected to be garbage collected)
+        type: bool  default: true
+  --trace_detached_contexts (trace native contexts that are expected to be garbage collected)
+        type: bool  default: false
+  --move_object_start (enable moving of object starts)
+        type: bool  default: true
+  --memory_reducer (use memory reducer)
+        type: bool  default: true
+  --scavenge_reclaim_unmodified_objects (remove unmodified and unreferenced objects)
+        type: bool  default: true
+  --heap_growing_percent (specifies heap growing factor as (1 + heap_growing_percent/100))
+        type: int  default: 0
+  --clear_exceptions_on_js_entry (clear pending exceptions when entering JavaScript)
+        type: bool  default: false
+  --histogram_interval (time interval in ms for aggregating memory histograms)
+        type: int  default: 600000
+  --trace_object_groups (print object groups detected during each garbage collection)
+        type: bool  default: false
+  --heap_profiler_trace_objects (Dump heap object allocations/movements/size_updates)
+        type: bool  default: false
+  --sampling_heap_profiler_suppress_randomness (Use constant sample intervals to eliminate test flakiness)
+        type: bool  default: false
+  --use_idle_notification (Use idle notification to reduce memory footprint.)
+        type: bool  default: true
+  --use_ic (use inline caching)
+        type: bool  default: true
+  --trace_ic (trace inline cache state transitions)
+        type: bool  default: false
+  --tf_load_ic_stub (use TF LoadIC stub)
+        type: bool  default: true
+  --native_code_counters (generate extra code for manipulating stats counters)
+        type: bool  default: false
+  --always_compact (Perform compaction on every full GC)
+        type: bool  default: false
+  --never_compact (Never perform compaction on full GC - testing only)
+        type: bool  default: false
+  --compact_code_space (Compact code space on full collections)
+        type: bool  default: true
+  --cleanup_code_caches_at_gc (Flush inline caches prior to mark compact collection and flush code caches in maps during mark compact cycle.)
+        type: bool  default: true
+  --use_marking_progress_bar (Use a progress bar to scan large objects in increments when incremental marking is active.)
+        type: bool  default: true
+  --zap_code_space (Zap free memory in code space with 0xCC while sweeping.)
+        type: bool  default: false
+  --random_seed (Default seed for initializing random generator (0, the default, means to use system random).)
+        type: int  default: 0
+  --trace_weak_arrays (Trace WeakFixedArray usage)
+        type: bool  default: false
+  --trace_prototype_users (Trace updates to prototype user tracking)
+        type: bool  default: false
+  --use_verbose_printer (allows verbose printing)
+        type: bool  default: true
+  --trace_for_in_enumerate (Trace for-in enumerate slow-paths)
+        type: bool  default: false
+  --allow_natives_syntax (allow natives syntax)
+        type: bool  default: false
+  --trace_parse (trace parsing and preparsing)
+        type: bool  default: false
+  --trace_sim (Trace simulator execution)
+        type: bool  default: false
+  --debug_sim (Enable debugging the simulator)
+        type: bool  default: false
+  --check_icache (Check icache flushes in ARM and MIPS simulator)
+        type: bool  default: false
+  --stop_sim_at (Simulator stop after x number of instructions)
+        type: int  default: 0
+  --sim_stack_alignment (Stack alingment in bytes in simulator (4 or 8, 8 is default))
+        type: int  default: 8
+  --sim_stack_size (Stack size of the ARM64, MIPS64 and PPC64 simulator in kBytes (default is 2 MB))
+        type: int  default: 2048
+  --log_regs_modified (When logging register values, only print modified registers.)
+        type: bool  default: true
+  --log_colour (When logging, try to use coloured output.)
+        type: bool  default: true
+  --ignore_asm_unimplemented_break (Don't break for ASM_UNIMPLEMENTED_BREAK macros.)
+        type: bool  default: false
+  --trace_sim_messages (Trace simulator debug messages. Implied by --trace-sim.)
+        type: bool  default: false
+  --stack_trace_on_illegal (print stack trace when an illegal exception is thrown)
+        type: bool  default: false
+  --abort_on_uncaught_exception (abort program (dump core) when an uncaught exception is thrown)
+        type: bool  default: false
+  --randomize_hashes (randomize hashes to avoid predictable hash collisions (with snapshots this option cannot override the baked-in seed))
+        type: bool  default: true
+  --hash_seed (Fixed seed to use to hash property keys (0 means random)(with snapshots this option cannot override the baked-in seed))
+        type: int  default: 0
+  --trace_rail (trace RAIL mode)
+        type: bool  default: false
+  --runtime_call_stats (report runtime call counts and times)
+        type: bool  default: false
+  --profile_deserialization (Print the time it takes to deserialize the snapshot.)
+        type: bool  default: false
+  --serialization_statistics (Collect statistics on serialized objects.)
+        type: bool  default: false
+  --regexp_optimization (generate optimized regexp code)
+        type: bool  default: true
+  --testing_bool_flag (testing_bool_flag)
+        type: bool  default: true
+  --testing_maybe_bool_flag (testing_maybe_bool_flag)
+        type: maybe_bool  default: unset
+  --testing_int_flag (testing_int_flag)
+        type: int  default: 13
+  --testing_float_flag (float-flag)
+        type: float  default: 2.5
+  --testing_string_flag (string-flag)
+        type: string  default: Hello, world!
+  --testing_prng_seed (Seed used for threading test randomness)
+        type: int  default: 42
+  --startup_src (Write V8 startup as C++ src. (mksnapshot only))
+        type: string  default: NULL
+  --startup_blob (Write V8 startup blob file. (mksnapshot only))
+        type: string  default: NULL
+  --profile_hydrogen_code_stub_compilation (Print the time it takes to lazily compile hydrogen code stubs.)
+        type: bool  default: false
+  --predictable (enable predictable mode)
+        type: bool  default: false
+  --force_marking_deque_overflows (force overflows of marking deque by reducing it's size to 64 words)
+        type: bool  default: false
+  --stress_compaction (stress the GC compactor to flush out bugs (implies --force_marking_deque_overflows))
+        type: bool  default: false
+  --manual_evacuation_candidates_selection (Test mode only flag. It allows an unit test to select evacuation candidates pages (requires --stress_compaction).)
+        type: bool  default: false
+  --external_allocation_limit_incremental_time (Time spent in incremental marking steps (in ms) once the external allocation limit is reached)
+        type: int  default: 1
+  --disable_old_api_accessors (Disable old-style API accessors whose setters trigger through the prototype chain)
+        type: bool  default: false
+  --help (Print usage message, including flags, on console)
+        type: bool  default: true
+  --dump_counters (Dump counters on exit)
+        type: bool  default: false
+  --map_counters (Map counters to a file)
+        type: string  default: 
+  --js_arguments (Pass all remaining arguments to the script. Alias for "--".)
+        type: arguments  default: 
+  --log (Minimal logging (no API, code, GC, suspect, or handles samples).)
+        type: bool  default: false
+  --log_all (Log all events to the log file.)
+        type: bool  default: false
+  --log_api (Log API events to the log file.)
+        type: bool  default: false
+  --log_code (Log code events to the log file without profiling.)
+        type: bool  default: false
+  --log_gc (Log heap samples on garbage collection for the hp2ps tool.)
+        type: bool  default: false
+  --log_handles (Log global handle events.)
+        type: bool  default: false
+  --log_suspect (Log suspect operations.)
+        type: bool  default: false
+  --prof (Log statistical profiling information (implies --log-code).)
+        type: bool  default: false
+  --prof_cpp (Like --prof, but ignore generated code.)
+        type: bool  default: false
+  --prof_browser_mode (Used with --prof, turns on browser-compatible mode for profiling.)
+        type: bool  default: true
+  --log_regexp (Log regular expression execution.)
+        type: bool  default: false
+  --logfile (Specify the name of the log file.)
+        type: string  default: v8.log
+  --logfile_per_isolate (Separate log files for each isolate.)
+        type: bool  default: true
+  --ll_prof (Enable low-level linux profiler.)
+        type: bool  default: false
+  --perf_basic_prof (Enable perf linux profiler (basic support).)
+        type: bool  default: false
+  --perf_basic_prof_only_functions (Only report function code ranges to perf (i.e. no stubs).)
+        type: bool  default: false
+  --perf_prof (Enable perf linux profiler (experimental annotate support).)
+        type: bool  default: false
+  --perf_prof_debug_info (Enable debug info for perf linux profiler (experimental).)
+        type: bool  default: false
+  --perf_prof_unwinding_info (Enable unwinding info for perf linux profiler (experimental).)
+        type: bool  default: false
+  --gc_fake_mmap (Specify the name of the file for fake gc mmap used in ll_prof)
+        type: string  default: /tmp/__v8_gc__
+  --log_internal_timer_events (Time internal events.)
+        type: bool  default: false
+  --log_timer_events (Time events including external callbacks.)
+        type: bool  default: false
+  --log_instruction_stats (Log AArch64 instruction statistics.)
+        type: bool  default: false
+  --log_instruction_file (AArch64 instruction statistics log file.)
+        type: string  default: arm64_inst.csv
+  --log_instruction_period (AArch64 instruction statistics logging period.)
+        type: int  default: 4194304
+  --redirect_code_traces (output deopt information and disassembly into file code-<pid>-<isolate id>.asm)
+        type: bool  default: false
+  --redirect_code_traces_to (output deopt information and disassembly into the given file)
+        type: string  default: NULL
+  --hydrogen_track_positions (track source code positions when building IR)
+        type: bool  default: false
+  --trace_elements_transitions (trace elements transitions)
+        type: bool  default: false
+  --trace_creation_allocation_sites (trace the creation of allocation sites)
+        type: bool  default: false
+  --print_code_stubs (print code stubs)
+        type: bool  default: false
+  --test_secondary_stub_cache (test secondary stub cache by disabling the primary one)
+        type: bool  default: false
+  --test_primary_stub_cache (test primary stub cache by disabling the secondary one)
+        type: bool  default: false
+  --print_code (print generated code)
+        type: bool  default: false
+  --print_opt_code (print optimized code)
+        type: bool  default: false
+  --print_unopt_code (print unoptimized code before printing optimized code based on it)
+        type: bool  default: false
+  --print_code_verbose (print more information for code)
+        type: bool  default: false
+  --print_builtin_code (print generated code for builtins)
+        type: bool  default: false
+  --sodium (print generated code output suitable for use with the Sodium code viewer)
+        type: bool  default: false
+  --print_all_code (enable all flags related to printing code)
+        type: bool  default: false
+Albin-CR:test albin.git$ node --v8-options | grep harmony 
+  --es_staging (enable test-worthy harmony features (for internal use only))
+  --harmony (enable all completed harmony features)
+  --harmony_shipping (enable all shipped harmony features)
+  --harmony_array_prototype_values (enable "harmony Array.prototype.values" (in progress))
+  --harmony_function_sent (enable "harmony function.sent" (in progress))
+  --harmony_sharedarraybuffer (enable "harmony sharedarraybuffer" (in progress))
+  --harmony_simd (enable "harmony simd" (in progress))
+  --harmony_explicit_tailcalls (enable "harmony explicit tail calls" (in progress))
+  --harmony_do_expressions (enable "harmony do-expressions" (in progress))
+  --harmony_restrictive_generators (enable "harmony restrictions on generator declarations" (in progress))
+  --harmony_regexp_named_captures (enable "harmony regexp named captures" (in progress))
+  --harmony_regexp_property (enable "harmony unicode regexp property classes" (in progress))
+  --harmony_for_in (enable "harmony for-in syntax" (in progress))
+  --harmony_trailing_commas (enable "harmony trailing commas in function parameter lists" (in progress))
+  --harmony_regexp_lookbehind (enable "harmony regexp lookbehind")
+  --harmony_tailcalls (enable "harmony tail calls")
+  --harmony_async_await (enable "harmony async-await")
+  --harmony_string_padding (enable "harmony String-padding methods")
+  --harmony_restrictive_declarations (enable "harmony limitations on sloppy mode function declarations")
+  --harmony_object_values_entries (enable "harmony Object.values / Object.entries")
+  --harmony_object_own_property_descriptors (enable "harmony Object.getOwnPropertyDescriptors()")
+Albin-CR:test albin.git$ ls
+app.js		bin		node_modules	package.json	public		routes		views
+Albin-CR:test albin.git$ cd ..
+Albin-CR:housing albin.git$ ls
+config		node_modules	package.json	server.js	test
+Albin-CR:housing albin.git$ nodemon --harmony_default_parameters --harmony-destructuring server.js 
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node --harmony_default_parameters --harmony-destructuring server.js`
+node: bad option: --harmony_default_parameters
+node: bad option: --harmony-destructuring
+[nodemon] app crashed - waiting for file changes before starting...
+^[[A^CAlbin-CR:housing albin.git$ node --harmony_default_parameters --harmony-destructuring server.js 
+node: bad option: --harmony_default_parameters
+node: bad option: --harmony-destructuring
+Albin-CR:housing albin.git$ node --harmony_default_parameters --harmony-destructuring server.js 
+node: bad option: --harmony_default_parameters
+node: bad option: --harmony-destructuring
+Albin-CR:housing albin.git$ npm install --save-dev babel-cli babel-preset-env
+
+> fsevents@1.1.1 install /Users/albin.git/Documents/housing/node_modules/fsevents
+> node install
+
+[fsevents] Success: "/Users/albin.git/Documents/housing/node_modules/fsevents/lib/binding/Release/node-v51-darwin-x64/fse.node" is installed via remote
+housing@1.0.0 /Users/albin.git/Documents/housing
+├─┬ babel-cli@6.24.0 
+│ ├─┬ babel-core@6.24.0 
+│ │ ├─┬ babel-code-frame@6.22.0 
+│ │ │ ├─┬ chalk@1.1.3 
+│ │ │ │ ├── ansi-styles@2.2.1 
+│ │ │ │ ├── escape-string-regexp@1.0.5 
+│ │ │ │ ├─┬ has-ansi@2.0.0 
+│ │ │ │ │ └── ansi-regex@2.1.1 
+│ │ │ │ ├── strip-ansi@3.0.1 
+│ │ │ │ └── supports-color@2.0.0 
+│ │ │ ├── esutils@2.0.2 
+│ │ │ └── js-tokens@3.0.1 
+│ │ ├─┬ babel-generator@6.24.0 
+│ │ │ ├─┬ detect-indent@4.0.0 
+│ │ │ │ └─┬ repeating@2.0.1 
+│ │ │ │   └─┬ is-finite@1.0.2 
+│ │ │ │     └── number-is-nan@1.0.1 
+│ │ │ ├── jsesc@1.3.0 
+│ │ │ └── trim-right@1.0.1 
+│ │ ├── babel-helpers@6.23.0 
+│ │ ├── babel-messages@6.23.0 
+│ │ ├── babel-template@6.23.0 
+│ │ ├─┬ babel-traverse@6.23.1 
+│ │ │ └── globals@9.17.0 
+│ │ ├─┬ babel-types@6.23.0 
+│ │ │ └── to-fast-properties@1.0.2 
+│ │ ├── babylon@6.16.1 
+│ │ ├── json5@0.5.1 
+│ │ ├─┬ minimatch@3.0.3 
+│ │ │ └─┬ brace-expansion@1.1.7 
+│ │ │   ├── balanced-match@0.4.2 
+│ │ │   └── concat-map@0.0.1 
+│ │ └── private@0.1.7 
+│ ├─┬ babel-polyfill@6.23.0 
+│ │ ├── core-js@2.4.1 
+│ │ └── regenerator-runtime@0.10.3 
+│ ├─┬ babel-register@6.24.0 
+│ │ ├─┬ home-or-tmp@2.0.0 
+│ │ │ ├── os-homedir@1.0.2 
+│ │ │ └── os-tmpdir@1.0.2 
+│ │ └── source-map-support@0.4.14 
+│ ├── babel-runtime@6.23.0 
+│ ├─┬ chokidar@1.6.1 
+│ │ ├─┬ anymatch@1.3.0 
+│ │ │ ├── arrify@1.0.1 
+│ │ │ └─┬ micromatch@2.3.11 
+│ │ │   ├─┬ arr-diff@2.0.0 
+│ │ │   │ └── arr-flatten@1.0.1 
+│ │ │   ├── array-unique@0.2.1 
+│ │ │   ├─┬ braces@1.8.5 
+│ │ │   │ ├─┬ expand-range@1.8.2 
+│ │ │   │ │ └─┬ fill-range@2.2.3 
+│ │ │   │ │   ├── is-number@2.1.0 
+│ │ │   │ │   ├── isobject@2.1.0 
+│ │ │   │ │   ├── randomatic@1.1.6 
+│ │ │   │ │   └── repeat-string@1.6.1 
+│ │ │   │ ├── preserve@0.2.0 
+│ │ │   │ └── repeat-element@1.1.2 
+│ │ │   ├─┬ expand-brackets@0.1.5 
+│ │ │   │ └── is-posix-bracket@0.1.1 
+│ │ │   ├── extglob@0.3.2 
+│ │ │   ├── filename-regex@2.0.0 
+│ │ │   ├─┬ kind-of@3.1.0 
+│ │ │   │ └── is-buffer@1.1.5 
+│ │ │   ├─┬ normalize-path@2.1.1 
+│ │ │   │ └── remove-trailing-separator@1.0.1 
+│ │ │   ├─┬ object.omit@2.0.1 
+│ │ │   │ ├─┬ for-own@0.1.5 
+│ │ │   │ │ └── for-in@1.0.2 
+│ │ │   │ └── is-extendable@0.1.1 
+│ │ │   ├─┬ parse-glob@3.0.4 
+│ │ │   │ ├── glob-base@0.3.0 
+│ │ │   │ └── is-dotfile@1.0.2 
+│ │ │   └─┬ regex-cache@0.4.3 
+│ │ │     ├── is-equal-shallow@0.1.3 
+│ │ │     └── is-primitive@2.0.0 
+│ │ ├── async-each@1.0.1 
+│ │ ├─┬ fsevents@1.1.1 
+│ │ │ ├── nan@2.6.1 
+│ │ │ └─┬ node-pre-gyp@0.6.33 
+│ │ │   ├─┬ mkdirp@0.5.1 
+│ │ │   │ └── minimist@0.0.8 
+│ │ │   ├─┬ nopt@3.0.6 
+│ │ │   │ └── abbrev@1.1.0 
+│ │ │   ├─┬ npmlog@4.0.2 
+│ │ │   │ ├─┬ are-we-there-yet@1.1.2 
+│ │ │   │ │ ├── delegates@1.0.0 
+│ │ │   │ │ └── readable-stream@2.2.2 
+│ │ │   │ ├── console-control-strings@1.1.0 
+│ │ │   │ ├─┬ gauge@2.7.3 
+│ │ │   │ │ ├── aproba@1.1.1 
+│ │ │   │ │ ├── has-unicode@2.0.1 
+│ │ │   │ │ ├── object-assign@4.1.1 
+│ │ │   │ │ ├── signal-exit@3.0.2 
+│ │ │   │ │ ├─┬ string-width@1.0.2 
+│ │ │   │ │ │ ├── code-point-at@1.1.0 
+│ │ │   │ │ │ └─┬ is-fullwidth-code-point@1.0.0 
+│ │ │   │ │ │   └── number-is-nan@1.0.1 
+│ │ │   │ │ ├─┬ strip-ansi@3.0.1 
+│ │ │   │ │ │ └── ansi-regex@2.1.1 
+│ │ │   │ │ └── wide-align@1.1.0 
+│ │ │   │ └── set-blocking@2.0.0 
+│ │ │   ├─┬ rc@1.1.7 
+│ │ │   │ ├── deep-extend@0.4.1 
+│ │ │   │ ├── ini@1.3.4 
+│ │ │   │ ├── minimist@1.2.0 
+│ │ │   │ └── strip-json-comments@2.0.1 
+│ │ │   ├─┬ request@2.79.0 
+│ │ │   │ ├── aws-sign2@0.6.0 
+│ │ │   │ ├── aws4@1.6.0 
+│ │ │   │ ├── caseless@0.11.0 
+│ │ │   │ ├─┬ combined-stream@1.0.5 
+│ │ │   │ │ └── delayed-stream@1.0.0 
+│ │ │   │ ├── extend@3.0.0 
+│ │ │   │ ├── forever-agent@0.6.1 
+│ │ │   │ ├─┬ form-data@2.1.2 
+│ │ │   │ │ └── asynckit@0.4.0 
+│ │ │   │ ├─┬ har-validator@2.0.6 
+│ │ │   │ │ ├─┬ chalk@1.1.3 
+│ │ │   │ │ │ ├── ansi-styles@2.2.1 
+│ │ │   │ │ │ ├── escape-string-regexp@1.0.5 
+│ │ │   │ │ │ ├── has-ansi@2.0.0 
+│ │ │   │ │ │ └── supports-color@2.0.0 
+│ │ │   │ │ ├─┬ commander@2.9.0 
+│ │ │   │ │ │ └── graceful-readlink@1.0.1 
+│ │ │   │ │ ├─┬ is-my-json-valid@2.15.0 
+│ │ │   │ │ │ ├── generate-function@2.0.0 
+│ │ │   │ │ │ ├─┬ generate-object-property@1.2.0 
+│ │ │   │ │ │ │ └── is-property@1.0.2 
+│ │ │   │ │ │ ├── jsonpointer@4.0.1 
+│ │ │   │ │ │ └── xtend@4.0.1 
+│ │ │   │ │ └─┬ pinkie-promise@2.0.1 
+│ │ │   │ │   └── pinkie@2.0.4 
+│ │ │   │ ├─┬ hawk@3.1.3 
+│ │ │   │ │ ├── boom@2.10.1 
+│ │ │   │ │ ├── cryptiles@2.0.5 
+│ │ │   │ │ ├── hoek@2.16.3 
+│ │ │   │ │ └── sntp@1.0.9 
+│ │ │   │ ├─┬ http-signature@1.1.1 
+│ │ │   │ │ ├── assert-plus@0.2.0 
+│ │ │   │ │ ├─┬ jsprim@1.3.1 
+│ │ │   │ │ │ ├── extsprintf@1.0.2 
+│ │ │   │ │ │ ├── json-schema@0.2.3 
+│ │ │   │ │ │ └── verror@1.3.6 
+│ │ │   │ │ └─┬ sshpk@1.10.2 
+│ │ │   │ │   ├── asn1@0.2.3 
+│ │ │   │ │   ├── assert-plus@1.0.0 
+│ │ │   │ │   ├── bcrypt-pbkdf@1.0.1 
+│ │ │   │ │   ├─┬ dashdash@1.14.1 
+│ │ │   │ │   │ └── assert-plus@1.0.0 
+│ │ │   │ │   ├── ecc-jsbn@0.1.1 
+│ │ │   │ │   ├─┬ getpass@0.1.6 
+│ │ │   │ │   │ └── assert-plus@1.0.0 
+│ │ │   │ │   ├── jodid25519@1.0.2 
+│ │ │   │ │   ├── jsbn@0.1.1 
+│ │ │   │ │   └── tweetnacl@0.14.5 
+│ │ │   │ ├── is-typedarray@1.0.0 
+│ │ │   │ ├── isstream@0.1.2 
+│ │ │   │ ├── json-stringify-safe@5.0.1 
+│ │ │   │ ├─┬ mime-types@2.1.14 
+│ │ │   │ │ └── mime-db@1.26.0 
+│ │ │   │ ├── oauth-sign@0.8.2 
+│ │ │   │ ├── qs@6.3.1 
+│ │ │   │ ├── stringstream@0.0.5 
+│ │ │   │ ├─┬ tough-cookie@2.3.2 
+│ │ │   │ │ └── punycode@1.4.1 
+│ │ │   │ ├── tunnel-agent@0.4.3 
+│ │ │   │ └── uuid@3.0.1 
+│ │ │   ├─┬ rimraf@2.5.4 
+│ │ │   │ └─┬ glob@7.1.1 
+│ │ │   │   ├── fs.realpath@1.0.0 
+│ │ │   │   ├── inflight@1.0.6 
+│ │ │   │   ├─┬ minimatch@3.0.3 
+│ │ │   │   │ └─┬ brace-expansion@1.1.6 
+│ │ │   │   │   ├── balanced-match@0.4.2 
+│ │ │   │   │   └── concat-map@0.0.1 
+│ │ │   │   ├── once@1.4.0 
+│ │ │   │   └── path-is-absolute@1.0.1 
+│ │ │   ├── semver@5.3.0 
+│ │ │   ├─┬ tar@2.2.1 
+│ │ │   │ ├── block-stream@0.0.9 
+│ │ │   │ ├─┬ fstream@1.0.10 
+│ │ │   │ │ └── graceful-fs@4.1.11 
+│ │ │   │ └── inherits@2.0.3 
+│ │ │   └─┬ tar-pack@3.3.0 
+│ │ │     ├─┬ debug@2.2.0 
+│ │ │     │ └── ms@0.7.1 
+│ │ │     ├── fstream-ignore@1.0.5 
+│ │ │     ├─┬ once@1.3.3 
+│ │ │     │ └── wrappy@1.0.2 
+│ │ │     ├─┬ readable-stream@2.1.5 
+│ │ │     │ ├── buffer-shims@1.0.0 
+│ │ │     │ ├── core-util-is@1.0.2 
+│ │ │     │ ├── isarray@1.0.0 
+│ │ │     │ ├── process-nextick-args@1.0.7 
+│ │ │     │ ├── string_decoder@0.10.31 
+│ │ │     │ └── util-deprecate@1.0.2 
+│ │ │     └── uid-number@0.0.6 
+│ │ ├── glob-parent@2.0.0 
+│ │ ├─┬ is-binary-path@1.0.1 
+│ │ │ └── binary-extensions@1.8.0 
+│ │ ├─┬ is-glob@2.0.1 
+│ │ │ └── is-extglob@1.0.0 
+│ │ └─┬ readdirp@2.1.0 
+│ │   └── set-immediate-shim@1.0.1 
+│ ├── convert-source-map@1.5.0 
+│ ├── fs-readdir-recursive@1.0.0 
+│ ├─┬ glob@7.1.1 
+│ │ ├── fs.realpath@1.0.0 
+│ │ ├─┬ inflight@1.0.6 
+│ │ │ └── wrappy@1.0.2 
+│ │ └── once@1.4.0 
+│ ├─┬ output-file-sync@1.1.2 
+│ │ ├── graceful-fs@4.1.11 
+│ │ └── object-assign@4.1.1 
+│ ├── path-is-absolute@1.0.1 
+│ ├── slash@1.0.0 
+│ ├── source-map@0.5.6 
+│ └─┬ v8flags@2.0.12 
+│   └── user-home@1.1.1 
+└─┬ babel-preset-env@1.3.2 
+  ├── babel-plugin-check-es2015-constants@6.22.0 
+  ├── babel-plugin-syntax-trailing-function-commas@6.22.0 
+  ├─┬ babel-plugin-transform-async-to-generator@6.22.0 
+  │ ├── babel-helper-remap-async-to-generator@6.22.0 
+  │ └── babel-plugin-syntax-async-functions@6.13.0 
+  ├── babel-plugin-transform-es2015-arrow-functions@6.22.0 
+  ├── babel-plugin-transform-es2015-block-scoped-functions@6.22.0 
+  ├── babel-plugin-transform-es2015-block-scoping@6.23.0 
+  ├─┬ babel-plugin-transform-es2015-classes@6.23.0 
+  │ ├── babel-helper-define-map@6.23.0 
+  │ ├── babel-helper-function-name@6.23.0 
+  │ ├── babel-helper-optimise-call-expression@6.23.0 
+  │ └── babel-helper-replace-supers@6.23.0 
+  ├── babel-plugin-transform-es2015-computed-properties@6.22.0 
+  ├── babel-plugin-transform-es2015-destructuring@6.23.0 
+  ├── babel-plugin-transform-es2015-duplicate-keys@6.22.0 
+  ├── babel-plugin-transform-es2015-for-of@6.23.0 
+  ├── babel-plugin-transform-es2015-function-name@6.22.0 
+  ├── babel-plugin-transform-es2015-literals@6.22.0 
+  ├── babel-plugin-transform-es2015-modules-amd@6.24.0 
+  ├─┬ babel-plugin-transform-es2015-modules-commonjs@6.24.0 
+  │ └── babel-plugin-transform-strict-mode@6.22.0 
+  ├─┬ babel-plugin-transform-es2015-modules-systemjs@6.23.0 
+  │ └── babel-helper-hoist-variables@6.22.0 
+  ├── babel-plugin-transform-es2015-modules-umd@6.24.0 
+  ├── babel-plugin-transform-es2015-object-super@6.22.0 
+  ├─┬ babel-plugin-transform-es2015-parameters@6.23.0 
+  │ ├── babel-helper-call-delegate@6.22.0 
+  │ └── babel-helper-get-function-arity@6.22.0 
+  ├── babel-plugin-transform-es2015-shorthand-properties@6.22.0 
+  ├── babel-plugin-transform-es2015-spread@6.22.0 
+  ├─┬ babel-plugin-transform-es2015-sticky-regex@6.22.0 
+  │ └── babel-helper-regex@6.22.0 
+  ├── babel-plugin-transform-es2015-template-literals@6.22.0 
+  ├── babel-plugin-transform-es2015-typeof-symbol@6.23.0 
+  ├─┬ babel-plugin-transform-es2015-unicode-regex@6.22.0 
+  │ └─┬ regexpu-core@2.0.0 
+  │   ├── regenerate@1.3.2 
+  │   ├── regjsgen@0.2.0 
+  │   └─┬ regjsparser@0.1.5 
+  │     └── jsesc@0.5.0 
+  ├─┬ babel-plugin-transform-exponentiation-operator@6.22.0 
+  │ ├─┬ babel-helper-builder-binary-assignment-operator-visitor@6.22.0 
+  │ │ └── babel-helper-explode-assignable-expression@6.22.0 
+  │ └── babel-plugin-syntax-exponentiation-operator@6.13.0 
+  ├─┬ babel-plugin-transform-regenerator@6.22.0 
+  │ └── regenerator-transform@0.9.8 
+  ├─┬ browserslist@1.7.7 
+  │ ├── caniuse-db@1.0.30000649 
+  │ └── electron-to-chromium@1.3.2 
+  └─┬ invariant@2.2.2 
+    └── loose-envify@1.3.1 
+
+npm WARN housing@1.0.0 No repository field.
+Albin-CR:housing albin.git$ bable server.js 
+config/       node_modules/ package.json  server.js     test/         
+Albin-CR:housing albin.git$ bable server.js --output-file ../
+-bash: bable: command not found
+Albin-CR:housing albin.git$ nodemon
+  Usage: nodemon [nodemon options] [script.js] [args]
+
+  See "nodemon --help" for more.
+
+Albin-CR:housing albin.git$ node server.js 
+/Users/albin.git/Documents/housing/server.js:3
+import express from 'express'
+^^^^^^
+SyntaxError: Unexpected token import
+    at Object.exports.runInThisContext (vm.js:73:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+Albin-CR:housing albin.git$ npm install babel-cli babel-preset-env --save-dev
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "install" "babel-cli" "babel-preset-env" "--save-dev"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! file /Users/albin.git/Documents/housing/package.json
+npm ERR! code EJSONPARSE
+
+npm ERR! Failed to parse json
+npm ERR! Unexpected token '}' at 28:1
+npm ERR! }
+npm ERR! ^
+npm ERR! File: /Users/albin.git/Documents/housing/package.json
+npm ERR! Failed to parse package.json data.
+npm ERR! package.json must be actual JSON, not just JavaScript.
+npm ERR! 
+npm ERR! This is not a bug in npm.
+npm ERR! Tell the package author to fix their package.json file. JSON.parse
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ npm install babel-cli babel-preset-env --save-dev
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "install" "babel-cli" "babel-preset-env" "--save-dev"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! file /Users/albin.git/Documents/housing/package.json
+npm ERR! code EJSONPARSE
+
+npm ERR! Failed to parse json
+npm ERR! Trailing comma in object at 25:1
+npm ERR! }
+npm ERR! ^
+npm ERR! File: /Users/albin.git/Documents/housing/package.json
+npm ERR! Failed to parse package.json data.
+npm ERR! package.json must be actual JSON, not just JavaScript.
+npm ERR! 
+npm ERR! This is not a bug in npm.
+npm ERR! Tell the package author to fix their package.json file. JSON.parse
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ sudo npm install babel-cli babel-preset-env --save-dev
+Password:
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "install" "babel-cli" "babel-preset-env" "--save-dev"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! file /Users/albin.git/Documents/housing/package.json
+npm ERR! code EJSONPARSE
+
+npm ERR! Failed to parse json
+npm ERR! Trailing comma in object at 25:1
+npm ERR! }
+npm ERR! ^
+npm ERR! File: /Users/albin.git/Documents/housing/package.json
+npm ERR! Failed to parse package.json data.
+npm ERR! package.json must be actual JSON, not just JavaScript.
+npm ERR! 
+npm ERR! This is not a bug in npm.
+npm ERR! Tell the package author to fix their package.json file. JSON.parse
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ ls
+config		node_modules	npm-debug.log	package.json	server.js	test
+Albin-CR:housing albin.git$ sudo npm install babel-cli babel-preset-env --save-dev
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "install" "babel-cli" "babel-preset-env" "--save-dev"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! file /Users/albin.git/Documents/housing/package.json
+npm ERR! code EJSONPARSE
+
+npm ERR! Failed to parse json
+npm ERR! Trailing comma in object at 21:1
+npm ERR! }
+npm ERR! ^
+npm ERR! File: /Users/albin.git/Documents/housing/package.json
+npm ERR! Failed to parse package.json data.
+npm ERR! package.json must be actual JSON, not just JavaScript.
+npm ERR! 
+npm ERR! This is not a bug in npm.
+npm ERR! Tell the package author to fix their package.json file. JSON.parse
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ sudo npm install babel-cli babel-preset-env --save-dev
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "install" "babel-cli" "babel-preset-env" "--save-dev"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! file /Users/albin.git/Documents/housing/package.json
+npm ERR! code EJSONPARSE
+
+npm ERR! Failed to parse json
+npm ERR! Trailing comma in object at 21:1
+npm ERR! }
+npm ERR! ^
+npm ERR! File: /Users/albin.git/Documents/housing/package.json
+npm ERR! Failed to parse package.json data.
+npm ERR! package.json must be actual JSON, not just JavaScript.
+npm ERR! 
+npm ERR! This is not a bug in npm.
+npm ERR! Tell the package author to fix their package.json file. JSON.parse
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ sudo npm install babel-cli babel-preset-env --save-dev
+housing@1.0.0 /Users/albin.git/Documents/housing
+├── babel-cli@6.24.0 
+└── babel-preset-env@1.3.2 
+
+npm WARN housing@1.0.0 No repository field.
+Albin-CR:housing albin.git$ node start
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/albin.git/Documents/housing/start'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+Albin-CR:housing albin.git$ npm install babel-preset-env --save-dev
+housing@1.0.0 /Users/albin.git/Documents/housing
+└── babel-preset-env@1.3.2 
+
+npm WARN housing@1.0.0 No repository field.
+Albin-CR:housing albin.git$ touch .babelrc
+Albin-CR:housing albin.git$ nano .babelrc 
+Albin-CR:housing albin.git$ nano start
+Albin-CR:housing albin.git$ node start
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/albin.git/Documents/housing/start'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+Albin-CR:housing albin.git$ clear
+
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ node start
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/albin.git/Documents/housing/start'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+Albin-CR:housing albin.git$ node babel-node
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/albin.git/Documents/housing/babel-node'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+Albin-CR:housing albin.git$ node start
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/albin.git/Documents/housing/start'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+Albin-CR:housing albin.git$ node test
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/albin.git/Documents/housing/test'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+Albin-CR:housing albin.git$ ls
+config		node_modules	package.json	server.js	test
+Albin-CR:housing albin.git$ node start
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module '/Users/albin.git/Documents/housing/start'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+Albin-CR:housing albin.git$ npm start
+
+> housing@1.0.0 start /Users/albin.git/Documents/housing
+> node server.js
+
+/Users/albin.git/Documents/housing/server.js:3
+import express from 'express'
+^^^^^^
+SyntaxError: Unexpected token import
+    at Object.exports.runInThisContext (vm.js:73:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! code ELIFECYCLE
+npm ERR! housing@1.0.0 start: `node server.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the housing@1.0.0 start script 'node server.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the housing package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node server.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs housing
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls housing
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ npm start
+
+> housing@1.0.0 start /Users/albin.git/Documents/housing
+> node server.js
+
+/Users/albin.git/Documents/housing/server.js:3
+import express from 'express'
+^^^^^^
+SyntaxError: Unexpected token import
+    at Object.exports.runInThisContext (vm.js:73:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! code ELIFECYCLE
+npm ERR! housing@1.0.0 start: `node server.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the housing@1.0.0 start script 'node server.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the housing package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node server.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs housing
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls housing
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ npm start
+
+> housing@1.0.0 start /Users/albin.git/Documents/housing
+> node server.js
+
+/Users/albin.git/Documents/housing/server.js:3
+import express from 'express'
+^^^^^^
+SyntaxError: Unexpected token import
+    at Object.exports.runInThisContext (vm.js:73:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:533:3
+
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! code ELIFECYCLE
+npm ERR! housing@1.0.0 start: `node server.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the housing@1.0.0 start script 'node server.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the housing package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node server.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs housing
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls housing
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ npm test
+
+> housing@1.0.0 test /Users/albin.git/Documents/housing
+> echo "Error: no test specified" && exit 1
+
+Error: no test specified
+npm ERR! Test failed.  See above for more details.
+Albin-CR:housing albin.git$ npm bable-noe
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, bin, bugs, c, cache, completion, config,
+    ddp, dedupe, deprecate, dist-tag, docs, doctor, edit,
+    explore, get, help, help-search, i, init, install,
+    install-test, it, link, list, ln, login, logout, ls,
+    outdated, owner, pack, ping, prefix, prune, publish, rb,
+    rebuild, repo, restart, root, run, run-script, s, se,
+    search, set, shrinkwrap, star, stars, start, stop, t, team,
+    test, tst, un, uninstall, unpublish, unstar, up, update, v,
+    version, view, whoami
+
+npm <cmd> -h     quick help on <cmd>
+npm -l           display full usage info
+npm help <term>  search for help on <term>
+npm help npm     involved overview
+
+Specify configs in the ini-formatted file:
+    /Users/albin.git/.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@4.1.2 /usr/local/lib/node_modules/npm
+Albin-CR:housing albin.git$ npm bable-node
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, bin, bugs, c, cache, completion, config,
+    ddp, dedupe, deprecate, dist-tag, docs, doctor, edit,
+    explore, get, help, help-search, i, init, install,
+    install-test, it, link, list, ln, login, logout, ls,
+    outdated, owner, pack, ping, prefix, prune, publish, rb,
+    rebuild, repo, restart, root, run, run-script, s, se,
+    search, set, shrinkwrap, star, stars, start, stop, t, team,
+    test, tst, un, uninstall, unpublish, unstar, up, update, v,
+    version, view, whoami
+
+npm <cmd> -h     quick help on <cmd>
+npm -l           display full usage info
+npm help <term>  search for help on <term>
+npm help npm     involved overview
+
+Specify configs in the ini-formatted file:
+    /Users/albin.git/.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@4.1.2 /usr/local/lib/node_modules/npm
+Albin-CR:housing albin.git$ npm bable-node
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, bin, bugs, c, cache, completion, config,
+    ddp, dedupe, deprecate, dist-tag, docs, doctor, edit,
+    explore, get, help, help-search, i, init, install,
+    install-test, it, link, list, ln, login, logout, ls,
+    outdated, owner, pack, ping, prefix, prune, publish, rb,
+    rebuild, repo, restart, root, run, run-script, s, se,
+    search, set, shrinkwrap, star, stars, start, stop, t, team,
+    test, tst, un, uninstall, unpublish, unstar, up, update, v,
+    version, view, whoami
+
+npm <cmd> -h     quick help on <cmd>
+npm -l           display full usage info
+npm help <term>  search for help on <term>
+npm help npm     involved overview
+
+Specify configs in the ini-formatted file:
+    /Users/albin.git/.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@4.1.2 /usr/local/lib/node_modules/npm
+Albin-CR:housing albin.git$ ls
+config		node_modules	package.json	server.js	test
+Albin-CR:housing albin.git$ cd ..
+Albin-CR:Documents albin.git$ ls
+chacka	housing	test2
+Albin-CR:Documents albin.git$ cd housing/
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ celE
+-bash: celE: command not found
+Albin-CR:housing albin.git$ clear
+
+Albin-CR:housing albin.git$ ls
+config		node_modules	package.json	server.js	test
+Albin-CR:housing albin.git$ nodemon --exec babel-node --presets=es2015 --ignore='foo\|bar\|baz' -- path/to/script.js
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `babel-node --presets=es2015 --ignore=foo\|bar\|baz path/to/script.js`
+sh: babel-node: command not found
+[nodemon] failed to start process, "babel-node" exec not found
+events.js:166
+      throw err;
+      ^
+
+Error: Uncaught, unspecified "error" event. (127)
+    at Bus.emit (events.js:164:17)
+    at ChildProcess.<anonymous> (/usr/local/lib/node_modules/nodemon/lib/monitor/run.js:118:11)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:192:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Albin-CR:housing albin.git$ nodemon --exec npm run babel-node -- server.js 
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `npm run babel-node server.js`
+
+> housing@1.0.0 babel-node /Users/albin.git/Documents/housing
+> babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"
+
+/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:328
+        throw e;
+        ^
+
+ReferenceError: Unknown plugin "transform-flow-strip-types" specified in "/Users/albin.git/Documents/housing/node_modules/babel-preset-env/package.json" at 0, attempted to resolve relative to "/Users/albin.git/Documents/housing/node_modules/babel-preset-env" (While processing preset: "/Users/albin.git/Documents/housing/node_modules/babel-preset-env/lib/index.js")
+    at /Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (native)
+    at Function.normalisePlugins (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at compile (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:103:45)
+    at loader (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:144:14)
+    at Object.require.extensions.(anonymous function) [as .js] (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "run" "babel-node" "server.js"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! code ELIFECYCLE
+npm ERR! housing@1.0.0 babel-node: `babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the housing@1.0.0 babel-node script 'babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the housing package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs housing
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls housing
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+[nodemon] app crashed - waiting for file changes before starting...
+npm install babel-cli babel-preset-env --save-dev
+^CAlbin-CR:housing albin.git$ npm install babel-cli babel-preset-env --save-dev
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "install" "babel-cli" "babel-preset-env" "--save-dev"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! file /Users/albin.git/Documents/housing/package.json
+npm ERR! code EJSONPARSE
+
+npm ERR! Failed to parse json
+npm ERR! Trailing comma in object at 21:1
+npm ERR! }
+npm ERR! ^
+npm ERR! File: /Users/albin.git/Documents/housing/package.json
+npm ERR! Failed to parse package.json data.
+npm ERR! package.json must be actual JSON, not just JavaScript.
+npm ERR! 
+npm ERR! This is not a bug in npm.
+npm ERR! Tell the package author to fix their package.json file. JSON.parse
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ npm install babel-cli babel-preset-env --save-dev
+housing@1.0.0 /Users/albin.git/Documents/housing
+├── babel-cli@6.24.0 
+└── babel-preset-env@1.3.2 
+
+npm WARN housing@1.0.0 No repository field.
+Albin-CR:housing albin.git$ nodemon --exec npm run babel-node -- server.js 
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `npm run babel-node server.js`
+
+> housing@1.0.0 babel-node /Users/albin.git/Documents/housing
+> babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"
+
+/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:328
+        throw e;
+        ^
+
+ReferenceError: Unknown plugin "transform-flow-strip-types" specified in "/Users/albin.git/Documents/housing/node_modules/babel-preset-env/package.json" at 0, attempted to resolve relative to "/Users/albin.git/Documents/housing/node_modules/babel-preset-env" (While processing preset: "/Users/albin.git/Documents/housing/node_modules/babel-preset-env/lib/index.js")
+    at /Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (native)
+    at Function.normalisePlugins (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at compile (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:103:45)
+    at loader (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:144:14)
+    at Object.require.extensions.(anonymous function) [as .js] (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "run" "babel-node" "server.js"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! code ELIFECYCLE
+npm ERR! housing@1.0.0 babel-node: `babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the housing@1.0.0 babel-node script 'babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the housing package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs housing
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls housing
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+[nodemon] app crashed - waiting for file changes before starting...
+^[[A^CAlbin-CR:housing albin.git$ npm run babel-node -- server.js 
+
+> housing@1.0.0 babel-node /Users/albin.git/Documents/housing
+> babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"
+
+/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:328
+        throw e;
+        ^
+
+ReferenceError: Unknown plugin "transform-flow-strip-types" specified in "/Users/albin.git/Documents/housing/node_modules/babel-preset-env/package.json" at 0, attempted to resolve relative to "/Users/albin.git/Documents/housing/node_modules/babel-preset-env" (While processing preset: "/Users/albin.git/Documents/housing/node_modules/babel-preset-env/lib/index.js")
+    at /Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (native)
+    at Function.normalisePlugins (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at compile (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:103:45)
+    at loader (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:144:14)
+    at Object.require.extensions.(anonymous function) [as .js] (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "run" "babel-node" "--" "server.js"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! code ELIFECYCLE
+npm ERR! housing@1.0.0 babel-node: `babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the housing@1.0.0 babel-node script 'babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the housing package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs housing
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls housing
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+Albin-CR:housing albin.git$ nodemon --exec babel-node --presets=es2015 --ignore='foo\|bar\|baz' server.js 
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `babel-node --presets=es2015 --ignore=foo\|bar\|baz server.js`
+sh: babel-node: command not found
+[nodemon] failed to start process, "babel-node" exec not found
+events.js:166
+      throw err;
+      ^
+
+Error: Uncaught, unspecified "error" event. (127)
+    at Bus.emit (events.js:164:17)
+    at ChildProcess.<anonymous> (/usr/local/lib/node_modules/nodemon/lib/monitor/run.js:118:11)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:192:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
+Albin-CR:housing albin.git$ nodemon --exec npm run babel-node -- server.js 
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `npm run babel-node server.js`
+
+> housing@1.0.0 babel-node /Users/albin.git/Documents/housing
+> babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"
+
+/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:328
+        throw e;
+        ^
+
+ReferenceError: Unknown plugin "transform-flow-strip-types" specified in "/Users/albin.git/Documents/housing/node_modules/babel-preset-env/package.json" at 0, attempted to resolve relative to "/Users/albin.git/Documents/housing/node_modules/babel-preset-env" (While processing preset: "/Users/albin.git/Documents/housing/node_modules/babel-preset-env/lib/index.js")
+    at /Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (native)
+    at Function.normalisePlugins (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/albin.git/Documents/housing/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at compile (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:103:45)
+    at loader (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:144:14)
+    at Object.require.extensions.(anonymous function) [as .js] (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "run" "babel-node" "server.js"
+npm ERR! node v7.5.0
+npm ERR! npm  v4.1.2
+npm ERR! code ELIFECYCLE
+npm ERR! housing@1.0.0 babel-node: `babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the housing@1.0.0 babel-node script 'babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the housing package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     babel-node --presets=/*a*/ --ignore='foo|bar|baz' "server.js"
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs housing
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls housing
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/albin.git/Documents/housing/npm-debug.log
+[nodemon] app crashed - waiting for file changes before starting...
+^CAlbin-CR:housing albin.git$ npm install
+housing@1.0.0 /Users/albin.git/Documents/housing
+├── babel-preset-es2015@6.24.0 
+├─┬ babel-preset-stage-2@6.22.0 
+│ ├── babel-plugin-syntax-dynamic-import@6.18.0 
+│ ├─┬ babel-plugin-transform-class-properties@6.23.0 
+│ │ └── babel-plugin-syntax-class-properties@6.13.0 
+│ ├─┬ babel-plugin-transform-decorators@6.22.0 
+│ │ ├─┬ babel-helper-explode-class@6.22.0 
+│ │ │ └── babel-helper-bindify-decorators@6.22.0 
+│ │ └── babel-plugin-syntax-decorators@6.13.0 
+│ └─┬ babel-preset-stage-3@6.22.0 
+│   ├─┬ babel-plugin-transform-async-generator-functions@6.22.0 
+│   │ └── babel-plugin-syntax-async-generators@6.13.0 
+│   └─┬ babel-plugin-transform-object-rest-spread@6.23.0 
+│     └── babel-plugin-syntax-object-rest-spread@6.13.0 
+├─┬ mocha@3.2.0 
+│ ├── browser-stdout@1.3.0 
+│ ├─┬ debug@2.2.0 
+│ │ └── ms@0.7.1 
+│ ├── diff@1.4.0 
+│ ├── glob@7.0.5 
+│ ├── growl@1.9.2 
+│ ├── json3@3.3.2 
+│ ├─┬ lodash.create@3.1.1 
+│ │ ├─┬ lodash._baseassign@3.2.0 
+│ │ │ ├── lodash._basecopy@3.0.1 
+│ │ │ └─┬ lodash.keys@3.1.2 
+│ │ │   ├── lodash._getnative@3.9.1 
+│ │ │   ├── lodash.isarguments@3.1.0 
+│ │ │   └── lodash.isarray@3.0.4 
+│ │ ├── lodash._basecreate@3.0.3 
+│ │ └── lodash._isiterateecall@3.0.9 
+│ └─┬ supports-color@3.1.2 
+│   └── has-flag@1.0.0 
+└─┬ nodemon@1.11.0 
+  ├── ignore-by-default@1.0.1 
+  ├─┬ lodash.defaults@3.1.2 
+  │ ├─┬ lodash.assign@3.2.0 
+  │ │ └─┬ lodash._createassigner@3.1.1 
+  │ │   └── lodash._bindcallback@3.0.1 
+  │ └── lodash.restparam@3.6.1 
+  ├─┬ ps-tree@1.1.0 
+  │ └─┬ event-stream@3.3.4 
+  │   ├── duplexer@0.1.1 
+  │   ├── from@0.1.7 
+  │   ├── map-stream@0.1.0 
+  │   ├── pause-stream@0.0.11 
+  │   ├── split@0.3.3 
+  │   ├── stream-combiner@0.0.4 
+  │   └── through@2.3.8 
+  ├─┬ touch@1.0.0 
+  │ └─┬ nopt@1.0.10 
+  │   └── abbrev@1.1.0 
+  ├── undefsafe@0.0.3 
+  └─┬ update-notifier@0.5.0 
+    ├─┬ configstore@1.4.0 
+    │ ├── osenv@0.1.4 
+    │ ├── uuid@2.0.3 
+    │ ├─┬ write-file-atomic@1.3.1 
+    │ │ ├── imurmurhash@0.1.4 
+    │ │ └── slide@1.1.6 
+    │ └── xdg-basedir@2.0.0 
+    ├── is-npm@1.0.0 
+    ├─┬ latest-version@1.0.1 
+    │ └─┬ package-json@1.2.0 
+    │   ├─┬ got@3.3.1 
+    │   │ ├─┬ duplexify@3.5.0 
+    │   │ │ ├─┬ end-of-stream@1.0.0 
+    │   │ │ │ └── once@1.3.3 
+    │   │ │ └── stream-shift@1.0.0 
+    │   │ ├── infinity-agent@2.0.3 
+    │   │ ├── is-redirect@1.0.0 
+    │   │ ├── is-stream@1.1.0 
+    │   │ ├── lowercase-keys@1.0.0 
+    │   │ ├── nested-error-stacks@1.0.2 
+    │   │ ├── object-assign@3.0.0 
+    │   │ ├── prepend-http@1.0.4 
+    │   │ ├─┬ read-all-stream@3.1.0 
+    │   │ │ └─┬ pinkie-promise@2.0.1 
+    │   │ │   └── pinkie@2.0.4 
+    │   │ └── timed-out@2.0.0 
+    │   └─┬ registry-url@3.1.0 
+    │     └─┬ rc@1.2.1 
+    │       ├── deep-extend@0.4.1 
+    │       ├── ini@1.3.4 
+    │       ├── minimist@1.2.0 
+    │       └── strip-json-comments@2.0.1 
+    ├── repeating@1.1.3 
+    ├── semver-diff@2.1.0 
+    └── string-length@1.0.1 
+
+npm WARN housing@1.0.0 No repository field.
+Albin-CR:housing albin.git$ npm start
+
+> housing@1.0.0 start /Users/albin.git/Documents/housing
+> nodemon server.js --exec babel-node --presets es2015,stage-2
+
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `babel-node server.js --presets es2015,stage-2`
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module 'serve-favicon'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/albin.git/Documents/housing/server.js:8:1)
+    at Module._compile (module.js:571:32)
+    at loader (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Function.Module.runMain (module.js:605:10)
+    at Object.<anonymous> (/Users/albin.git/Documents/housing/node_modules/babel-cli/lib/_babel-node.js:154:22)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+[nodemon] app crashed - waiting for file changes before starting...
+^C
+Albin-CR:housing albin.git$ npm install serve-favicon --save -dev
+npm WARN install Usage of the `--dev` option is deprecated. Use `--only=dev` instead.
+housing@1.0.0 /Users/albin.git/Documents/housing
+└─┬ serve-favicon@2.4.2 
+  └── ms@1.0.0 
+
+npm WARN housing@1.0.0 No repository field.
+Albin-CR:housing albin.git$ npm start
+
+> housing@1.0.0 start /Users/albin.git/Documents/housing
+> nodemon server.js --exec babel-node --presets es2015,stage-2
+
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `babel-node server.js --presets es2015,stage-2`
+fs.js:907
+  return binding.stat(pathModule._makeLong(path));
+                 ^
+
+Error: ENOENT: no such file or directory, stat '/Users/albin.git/Documents/housing/config/static/img/favicon.png'
+    at Object.fs.statSync (fs.js:907:18)
+    at resolveSync (/Users/albin.git/Documents/housing/node_modules/serve-favicon/index.js:184:17)
+    at favicon (/Users/albin.git/Documents/housing/node_modules/serve-favicon/index.js:60:12)
+    at Object.<anonymous> (/Users/albin.git/Documents/housing/server.js:33:9)
+    at Module._compile (module.js:571:32)
+    at loader (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Function.Module.runMain (module.js:605:10)
+    at Object.<anonymous> (/Users/albin.git/Documents/housing/node_modules/babel-cli/lib/_babel-node.js:154:22)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+[nodemon] app crashed - waiting for file changes before starting...
+^[[Ars
+rs
+[nodemon] starting `babel-node server.js --presets es2015,stage-2`
+fs.js:907
+  return binding.stat(pathModule._makeLong(path));
+                 ^
+
+Error: ENOENT: no such file or directory, stat '/Users/albin.git/Documents/housing/config/static/img/favicon.png'
+    at Object.fs.statSync (fs.js:907:18)
+    at resolveSync (/Users/albin.git/Documents/housing/node_modules/serve-favicon/index.js:184:17)
+    at favicon (/Users/albin.git/Documents/housing/node_modules/serve-favicon/index.js:60:12)
+    at Object.<anonymous> (/Users/albin.git/Documents/housing/server.js:33:9)
+    at Module._compile (module.js:571:32)
+    at loader (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/Users/albin.git/Documents/housing/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Function.Module.runMain (module.js:605:10)
+    at Object.<anonymous> (/Users/albin.git/Documents/housing/node_modules/babel-cli/lib/_babel-node.js:154:22)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+[nodemon] app crashed - waiting for file changes before starting...
+rs
+[nodemon] starting `babel-node server.js --presets es2015,stage-2`
+/Users/albin.git/Documents/housing/server.js:106
+  _morgan2.default.info('listening on port ' + _config2.default.port);
+                   ^
+
+TypeError: _morgan2.default.info is not a function
+    at Server.<anonymous> (/Users/albin.git/Documents/housing/server.js:70:10)
+    at Object.onceWrapper (events.js:291:19)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:186:7)
+    at emitListeningNT (net.js:1287:10)
+    at _combinedTickCallback (internal/process/next_tick.js:71:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+    at Function.Module.runMain (module.js:607:11)
+    at Object.<anonymous> (/Users/albin.git/Documents/housing/node_modules/babel-cli/lib/_babel-node.js:154:22)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:418:7)
+[nodemon] app crashed - waiting for file changes before starting...
+^[rs
+rs
+[nodemon] starting `babel-node server.js --presets es2015,stage-2`
+listening on port 5000
+TypeError: View is not a constructor
+    at Function.render (/Users/albin.git/Documents/housing/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/Users/albin.git/Documents/housing/node_modules/express/lib/response.js:966:7)
+    at /Users/albin.git/Documents/housing/server.js:48:7
+    at Layer.handle_error (/Users/albin.git/Documents/housing/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/Users/albin.git/Documents/housing/node_modules/express/lib/router/index.js:315:13)
+    at /Users/albin.git/Documents/housing/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/albin.git/Documents/housing/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/albin.git/Documents/housing/node_modules/express/lib/router/index.js:275:10)
+    at /Users/albin.git/Documents/housing/server.js:41:3
+    at Layer.handle [as handle_request] (/Users/albin.git/Documents/housing/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/albin.git/Documents/housing/node_modules/express/lib/router/index.js:317:13)
+    at /Users/albin.git/Documents/housing/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/albin.git/Documents/housing/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/albin.git/Documents/housing/node_modules/express/lib/router/index.js:275:10)
+    at favicon (/Users/albin.git/Documents/housing/node_modules/serve-favicon/index.js:67:7)
+    at Layer.handle [as handle_request] (/Users/albin.git/Documents/housing/node_modules/express/lib/router/layer.js:95:5)
+GET / 404 11.360 ms - -
+GET /favicon.ico 200 39.032 ms - -
+ç^[[Aç∂^C
+Albin-CR:housing albin.git$ npm start
+
+> housing@1.0.0 start /Users/albin.git/Documents/housing
+> nodemon server.js --exec babel-node --presets es2015,stage-2
+
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `babel-node server.js --presets es2015,stage-2`
+listening on port 5000
+/Users/albin.git/Documents/housing/server.js:101
+  throw new Error('unable to connect to database at ' + _config2.default.db);
+  ^
+
+Error: unable to connect to database at mongodb://localhost:27017/test
+    at NativeConnection.<anonymous> (/Users/albin.git/Documents/housing/server.js:65:9)
+    at emitOne (events.js:96:13)
+    at NativeConnection.emit (events.js:189:7)
+    at Immediate.<anonymous> (/Users/albin.git/Documents/housing/node_modules/mongoose/lib/connection.js:317:19)
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+[nodemon] app crashed - waiting for file changes before starting...
+mkdir -p /data/db
+sudo mongod
+^C
+Albin-CR:housing albin.git$ mkdir -p /data/db
+mkdir: /data/db: Permission denied
+Albin-CR:housing albin.git$ sudo mongod
+Password:
+Sorry, try again.
+Password:
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] MongoDB starting : pid=48529 port=27017 dbpath=/data/db 64-bit host=Albin-CR
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] db version v3.4.1
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] git version: 5e103c4f5583e2566a45d740225dc250baacfbd7
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2j  26 Sep 2016
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] allocator: system
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] modules: none
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] build environment:
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] options: {}
+2017-04-07T17:17:03.900+0530 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory /data/db not found., terminating
+2017-04-07T17:17:03.900+0530 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2017-04-07T17:17:03.900+0530 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] now exiting
+2017-04-07T17:17:03.900+0530 I CONTROL  [initandlisten] shutting down with code:100
+Albin-CR:housing albin.git$ mongo
+MongoDB shell version v3.4.1
+connecting to: mongodb://127.0.0.1:27017
+2017-04-07T17:17:12.219+0530 W NETWORK  [main] Failed to connect to 127.0.0.1:27017, in(checking socket for error after poll), reason: Connection refused
+2017-04-07T17:17:12.220+0530 E QUERY    [main] Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed :
+connect@src/mongo/shell/mongo.js:234:13
+@(connect):1:6
+exception: connect failed
+Albin-CR:housing albin.git$ npm start
+
+> housing@1.0.0 start /Users/albin.git/Documents/housing
+> nodemon server.js --exec babel-node --presets es2015,stage-2
+
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `babel-node server.js --presets es2015,stage-2`
+listening on port 5000
+/Users/albin.git/Documents/housing/server.js:101
+  throw new Error('unable to connect to database at ' + _config2.default.db);
+  ^
+
+Error: unable to connect to database at mongodb://localhost:27017/test
+    at NativeConnection.<anonymous> (/Users/albin.git/Documents/housing/server.js:65:9)
+    at emitOne (events.js:96:13)
+    at NativeConnection.emit (events.js:189:7)
+    at Immediate.<anonymous> (/Users/albin.git/Documents/housing/node_modules/mongoose/lib/connection.js:317:19)
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+[nodemon] app crashed - waiting for file changes before starting...
+ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+^C
+Albin-CR:housing albin.git$ ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+/Users/albin.git/Library/LaunchAgents/homebrew.mxcl.mongodb.plist -> /usr/local/opt/mongodb/homebrew.mxcl.mongodb.plist
+Albin-CR:housing albin.git$ 
+Albin-CR:housing albin.git$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+/usr/local/Cellar/mongodb/3.4.1/homebrew.mxcl.mongodb.plist: Path had bad ownership/permissions
+Albin-CR:housing albin.git$ mongo
+MongoDB shell version v3.4.1
+connecting to: mongodb://127.0.0.1:27017
+2017-04-07T17:17:58.887+0530 W NETWORK  [main] Failed to connect to 127.0.0.1:27017, in(checking socket for error after poll), reason: Connection refused
+2017-04-07T17:17:58.887+0530 E QUERY    [main] Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed :
+connect@src/mongo/shell/mongo.js:234:13
+@(connect):1:6
+exception: connect failed
+Albin-CR:housing albin.git$ mongod
+2017-04-07T17:18:02.305+0530 I CONTROL  [initandlisten] MongoDB starting : pid=48699 port=27017 dbpath=/data/db 64-bit host=Albin-CR
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten] db version v3.4.1
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten] git version: 5e103c4f5583e2566a45d740225dc250baacfbd7
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2j  26 Sep 2016
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten] allocator: system
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten] modules: none
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten] build environment:
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-04-07T17:18:02.306+0530 I CONTROL  [initandlisten] options: {}
+
