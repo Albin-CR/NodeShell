@@ -10,88 +10,92 @@ import fs from "fs";
 const afflictionController = {};
 
 afflictionController.create = (req, res) => {
-  if (req.session.username != null) {
-  const currentImage = req.file;
-  const parameters = req.body;
+	console.log(req);
 
-  var gmCreater = (imagePath, newImagePath, width, height) => {
-    imageMagick(imagePath)
-      .resizeExact(width, height)
-      .write(newImagePath, function(err) {
-        if (!err) console.log("done");
-      });
-  };
+	if (req.session.username != null) {
+		const currentImage = req.file;
+		const parameters = req.body;
 
-  var width = 200;
-  var height = 200;
+		var gmCreater = (imagePath, newImagePath, width, height) => {
+			imageMagick(imagePath)
+				.resizeExact(width, height)
+				.write(newImagePath, function(err) {
+					if (!err) console.log("done");
+				});
+		};
 
-  const newImagePath = currentImage.destination +
-    currentImage.filename +
-    "_thumb." +
-    currentImage.mimetype.split("/")[1];
+		var width = 200;
+		var height = 200;
 
-  gmCreater(currentImage.path, newImagePath, width, height);
+		const newImagePath =
+			currentImage.destination +
+			currentImage.filename +
+			"_thumb." +
+			currentImage.mimetype.split("/")[1];
 
-  const affliction = new Affliction({
-    company: parameters.company,
-    type: parameters.type,
-    weblink: parameters.weblink,
-    description: parameters.description,
-    image: currentImage.path,
-    active: parameters.active
-  });
+		gmCreater(currentImage.path, newImagePath, width, height);
 
-  affliction
-    .save()
-    .then(newAffliction => {
-      res.status(200).json({
-        affliction: newAffliction
-      });
-    })
-    .catch(error => {
-      return res.status(500).json({
-        message: error,
-        error: "failed to create"
-      });
-    });
-  }
+		const affliction = new Affliction({
+			company: parameters.company,
+			type: parameters.type,
+			weblink: parameters.weblink,
+			description: parameters.description,
+			image: currentImage.path,
+			active: parameters.active
+		});
+
+		affliction
+			.save()
+			.then(newAffliction => {
+				res.status(200).json({
+					affliction: newAffliction
+				});
+			})
+			.catch(error => {
+				return res.status(500).json({
+					message: error,
+					error: "failed to create"
+				});
+			});
+	} else {
+		return res.json({
+			error: "You are not logged in."
+		});
+	}
 };
 
 afflictionController.display = (req, res) => {
-  if (req.session.username != null) {
-  console.log(req.session,"albin");
-  Affliction.find((err, data) => {
-    if (err == null) {
-      res.status(200).json({
-        data: data
-      });
-    } else {
-      res.status(500).json({
-        error: err
-      });
-    }
-  });
-}else{
-  console.log(req.session.username);
-}
+	console.log(req.session, "albin");
+	Affliction.find((err, data) => {
+		if (err == null) {
+			res.status(200).json({
+				data: data
+			});
+		} else {
+			res.status(500).json({
+				error: err
+			});
+		}
+	});
 };
 
 afflictionController.remove = (req, res) => {
-  if (req.session.username != null) {
-    Affliction.findOne({ _id: req.body.id }, (err, data) => {
-      console.log(err, data, "_____________________________");
-      if (err == null) {
-        Affliction.remove({ _id: req.body.id }, (err, data) => {
-          res.redirect("/api/display");
-        });
-      } else {
-        console.log("not found");
-        res.redirect("/");
-      }
-    });
-  } else {
-    res.redirect("/");
-  }
+	console.log(req.body.id);
+	// if (req.session.username != null) {
+	Affliction.findOne({ _id: req.body.id }, (err, data) => {
+		console.log(err, data, "_____________________________");
+		if (err == null) {
+			Affliction.remove({ _id: req.body.id }, (err, data) => {
+				res.redirect("/api/display");
+			});
+		} else {
+			console.log("not found");
+			res.redirect("/");
+		}
+	});
+	// } else {
+	// 	res.redirect("/");
+	// }
 };
 
 export default afflictionController;

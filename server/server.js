@@ -25,26 +25,26 @@ import multer from "multer";
 import crypto from "crypto";
 
 var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', "http://localhost:3000");
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    // res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.header('Access-Control-Allow-Credentials',true)
-    next();
-}
+	res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+	res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+	// res.header("Access-Control-Allow-Headers", "Content-Type");
+	res.header("Access-Control-Allow-Credentials", true);
+	next();
+};
 
 var storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    require("fs").mkdir("uploads/" + req.session.username + "/", err => {
-      cb(null, "./uploads/" + req.session.username + "/");
-    });
-  },
-  filename: (req, file, cb) => {
-    crypto.pseudoRandomBytes(16, (err, raw) => {
-      if (err) return cb(err);
-      const newPath = raw.toString("hex") + path.extname(file.originalname)
-      cb(null,newPath);
-    });
-  }
+	destination: (req, file, cb) => {
+		require("fs").mkdir("uploads/" + req.session.username + "/", err => {
+			cb(null, "./uploads/" + req.session.username + "/");
+		});
+	},
+	filename: (req, file, cb) => {
+		crypto.pseudoRandomBytes(16, (err, raw) => {
+			if (err) return cb(err);
+			const newPath = raw.toString("hex") + path.extname(file.originalname);
+			cb(null, newPath);
+		});
+	}
 });
 
 var upload = multer({ storage: storage });
@@ -67,7 +67,7 @@ app.set("view engine", "ejs");
 app.set("view", path.join(config.root, "views"));
 
 // NOTE - Use
-app.use(allowCrossDomain)
+app.use(allowCrossDomain);
 app.use(methodOverride());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -78,84 +78,84 @@ app.use(logger("dev"));
 app.use(express.static(path.join(config.root, "/uploads")));
 // app.use(favicon(path.join(config.root, "static/img/favicon.png")));
 app.use(
-  session({
-    secret: "2tb678978tc786r3tn78789rwrb7r3t70 r3bt789n0cwtn89w0890xbt0r3qt78br3b78r378qr3b73Q",
-    store: new redisStore({
-      host: "localhost",
-      port: 6379,
-      client: client,
-      ttl: 260
-    }),
-    saveUninitialized: false,
-    resave: false
-  })
+	session({
+		secret: "2tb678978tc786r3tn78789rwrb7r3t70 r3bt789n0cwtn89w0890xbt0r3qt78br3b78r378qr3b73Q",
+		store: new redisStore({
+			host: "localhost",
+			port: 6379,
+			client: client,
+			ttl: 260
+		}),
+		saveUninitialized: false,
+		resave: false
+	})
 );
 
 // NOTE - Use routes
-app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use("/uploads", express.static(__dirname + "/uploads"));
 app.post("/api/register", userController.register);
 app.post("/api/login", userController.login);
 app.get("/api/logout", userController.logout);
 
 app.post("/api/create", upload.single("image"), afflictionController.create);
 app.get("/api/display", afflictionController.display);
-app.delete("/api/remove", afflictionController.remove);
+app.post("/api/remove", afflictionController.remove);
 
 // NOTE - 404 Handler
 
 app.get("/", (req, res) => {
-  res.json({
-    error: "oops.."
-  });
+	res.json({
+		error: "oops.."
+	});
 });
 
 // NOTE - catch 404 and forward to error handler
 
 app.use((req, res, next) => {
-  const err = new Error("Not Found");
-  err.status = 404;
-  next(err);
+	const err = new Error("Not Found");
+	err.status = 404;
+	next(err);
 });
 
 // NOTE - general errors
 
 app.use((err, req, res, next) => {
-  console.log("general errors");
-  const sc = err.status || 500;
+	console.log("general errors");
+	const sc = err.status || 500;
 
-  res.json({
-    error: {
-      status: res.status(sc).stringify,
-      message: err.message,
-      stack: config.env === "development" ? err.stack : ""
-    }
-  });
+	res.json({
+		error: {
+			status: res.status(sc).stringify,
+			message: err.message,
+			stack: config.env === "development" ? err.stack : ""
+		}
+	});
 });
 
 // NOTE - Mongoose setup
 // NOTE -  warn if MONGOURI is being used and pass is undefined
 
 if (config.db === process.env.MONGOURI && !config.pass)
-  console.log(`bad credientials for ${config.db} -- check env.`);
+	console.log(`bad credientials for ${config.db} -- check env.`);
 mongoose.connect(config.db, {
-  user: config.user,
-  pass: config.pass
+	user: config.user,
+	pass: config.pass
 });
 
 const db = mongoose.connection;
 db.on("error", () => {
-  throw new Error(`unable to connect to database at ${config.db}`);
+	throw new Error(`unable to connect to database at ${config.db}`);
 });
 
 // START AND STOP
 
 const server = app.listen(config.port, () => {
-  console.log(`listening on port ${config.port}`);
+	console.log(`listening on port ${config.port}`);
 });
 
 process.on("SIGINT", () => {
-  console.log("shutting down!");
-  db.close();
-  server.close();
-  process.exit();
+	console.log("shutting down!");
+	db.close();
+	server.close();
+	process.exit();
 });

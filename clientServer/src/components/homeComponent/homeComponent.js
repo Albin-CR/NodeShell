@@ -44,8 +44,8 @@ $.ajax({
 
     var affiliations = this.state.affiliation.map((item,index) =>{
 
-      return ( <li key={item._id}>
-
+      return (
+        <li key={item._id}>
         <p>{item.company}</p>
         <p>{item.type}</p>
         <p>{item.weblink}</p>
@@ -55,7 +55,7 @@ $.ajax({
         <p>{item.updated}</p>
         <img alt="" src={"http://localhost:4000/" + item.image} />
         <Link to="/login">Login</Link>
-      </li>)
+      </li> )
   });
     return (
 
