@@ -36,3 +36,14 @@ Lease type:Family / BachelorAvailable from:7-Apr-2017Floor no:1 of 3Bathrooms:2M
 
 Harsha.V
 Agent
+
+{
+    success: true,
+    data: 
+}
+
+{
+    success: false,
+    message: "",
+    error: ""
+}

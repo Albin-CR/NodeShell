@@ -9,10 +9,10 @@ import fs from "fs";
 
 const afflictionController = {};
 
-afflictionController.create = (req, res) => {
-	console.log(req);
+//NOTE - Create -
 
-	if (req.session.username != null) {
+afflictionController.create = (req, res) => {
+	if (req.session.username != null || req.session.username != undefined) {
 		const currentImage = req.file;
 		const parameters = req.body;
 
@@ -26,7 +26,7 @@ afflictionController.create = (req, res) => {
 
 		var width = 200;
 		var height = 200;
-
+		console.log(req.file, "asdadsdas");
 		const newImagePath =
 			currentImage.destination +
 			currentImage.filename +
@@ -47,55 +47,84 @@ afflictionController.create = (req, res) => {
 		affliction
 			.save()
 			.then(newAffliction => {
-				res.status(200).json({
-					affliction: newAffliction
+				res.json({
+					success: true,
+					data: newAffliction
 				});
 			})
 			.catch(error => {
-				return res.status(500).json({
-					message: error,
-					error: "failed to create"
+				return res.json({
+					success: false,
+					message: "Couldn't create. Try again after sometime.",
+					error: error
 				});
 			});
 	} else {
 		return res.json({
-			error: "You are not logged in."
+			success: false,
+			message: "Your not logged in."
 		});
 	}
 };
 
+//NOTE - Display -
+
 afflictionController.display = (req, res) => {
-	console.log(req.session, "albin");
-	Affliction.find((err, data) => {
-		if (err == null) {
-			res.status(200).json({
-				data: data
+	var isAdmin = false;
+	if (req.session.username != null || req.session.username != undefined) {
+		console.log(req.session.username);
+		isAdmin = true;
+	}
+	Affliction.find((error, affliction) => {
+		console.log({
+			success: true,
+			isAdmin: isAdmin
+		});
+		if (error == null) {
+			res.json({
+				success: true,
+				data: affliction,
+				isAdmin: isAdmin
 			});
 		} else {
-			res.status(500).json({
-				error: err
+			res.json({
+				success: false,
+				message: "Dose not exist.",
+				error: error
 			});
 		}
 	});
 };
 
+//NOTE - Remove -
+
 afflictionController.remove = (req, res) => {
-	console.log(req.body.id);
-	// if (req.session.username != null) {
-	Affliction.findOne({ _id: req.body.id }, (err, data) => {
-		console.log(err, data, "_____________________________");
-		if (err == null) {
-			Affliction.remove({ _id: req.body.id }, (err, data) => {
-				res.redirect("/api/display");
-			});
-		} else {
-			console.log("not found");
-			res.redirect("/");
-		}
-	});
-	// } else {
-	// 	res.redirect("/");
-	// }
+	console.log(req.session);
+	if (req.session.username != null || req.session.username != undefined) {
+		Affliction.findOne({ _id: req.body.id }, (error, data) => {
+			if (error == null) {
+				Affliction.remove({ _id: req.body.id }, (error, data) => {
+					// res.redirect("/api/display");
+					res.json({
+						success: true,
+						data: Affliction,
+						error: error
+					});
+				});
+			} else {
+				res.json({
+					success: false,
+					message: "Item dose not exist.",
+					error: error
+				});
+			}
+		});
+	} else {
+		res.json({
+			success: false,
+			message: "You are not logged in."
+		});
+	}
 };
 
 export default afflictionController;

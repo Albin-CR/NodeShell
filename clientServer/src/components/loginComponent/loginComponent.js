@@ -1,93 +1,105 @@
-import React, { Component } from 'react';
-import $ from 'jquery'
-import { BrowserRouter as Router,Route,Link } from 'react-router-dom'
+import React, { Component } from "react";
+import $ from "jquery";
+import { Link, Redirect } from "react-router-dom";
 
 class App extends Component {
+	constructor(props) {
+		super(props);
 
-  constructor(props){
-    super(props)
+		this.state = {
+			username: "",
+			password: "",
+			redirect: false
+		};
 
-      this.state = {
-        username:"",
-        password:"",
-      }
+		this.setFormData = this.setFormData.bind(this);
+		this.login = this.login.bind(this);
+	}
 
-      this.setFormData = this.setFormData.bind(this)
-      this.login = this.login.bind(this)
+	login(event) {
+		event.preventDefault();
+		const username = this.state.username;
+		const password = this.state.password;
 
-  }
+		$.ajax({
+			type: "POST",
+			xhrFields: {
+				withCredentials: true
+			},
+			url: "http://localhost:4000/api/login",
+			data: {
+				username: username,
+				password: password
+			}
+		})
+			.done(
+				function(data, status, xhr) {
+					console.log(data);
+					if (data.success) {
+						this.setState({ redirect: true });
+					}
+				}.bind(this)
+			)
+			.fail(function(xhr, status, err) {
+				console.log(err);
+			});
+	}
 
-  login(event){
-    event.preventDefault()
-      const username = this.state.username
-      const password = this.state.password
+	setFormData(event) {
+		const key = event.target.name;
+		const value = event.target.value;
 
-      $.ajax({
-      type: 'POST',
-      xhrFields: {
-            withCredentials: true
-      },
-      url: 'http://localhost:4000/api/login',
-      data: {
-        		"username": username,
-        		"password": password
-          },
-    })
-    .done(function(data,status,xhr) {
-    console.log(xhr)//getResponseHeader('connect.sid'))
+		switch (key) {
+			case "username":
+				this.setState({ username: value });
+				break;
 
-    })
-    .fail(function(xhr, status, err) {
-      console.log(err);
-    });
+			case "password":
+				this.setState({ password: value });
+				break;
 
-  }
+			default:
+				break;
+		}
+	}
 
-  setFormData(event){
+	render() {
+		if (this.state.redirect)
+			return <Redirect to={{ pathname: "/dashboard" }} />;
 
-    const key = event.target.name
-    const value = event.target.value
+		return (
+			<div>
+				<form onSubmit={this.login}>
+					<div>
 
-    switch (key) {
+						<label><b>Username</b></label>
+						<input
+							type="text"
+							placeholder="Enter Username"
+							name="username"
+							required
+							onChange={this.setFormData}
+						/>
 
-    case "username":
-    this.setState({ username: value });
-    break
+						<label><b>Password</b></label>
+						<input
+							type="password"
+							placeholder="Enter Password"
+							name="password"
+							required
+							onChange={this.setFormData}
+						/>
 
-    case "password":
-    this.setState({ password: value });
-    break
+					</div>
 
-    default:
-    break
+					<input type="submit" value="login" />
 
-    }
+				</form>
 
-  }
-
-  render() {
-    return (
-      <div>
-      <form onSubmit={this.login}>
-        <div>
-
-          <label><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="username" required onChange={this.setFormData} />
-
-          <label><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" required onChange={this.setFormData}/>
-
-        </div>
-
-        <input type="submit" value="login" />
-
-      </form>
-
-      <Link to="/home">Login</Link>
-    </div>
-
-    )
-  }
+				<Link to="/home">Login</Link>
+			</div>
+		);
+	}
 }
 
 export default App;

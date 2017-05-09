@@ -34,6 +34,7 @@ var allowCrossDomain = function(req, res, next) {
 
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
+		console.log(req.session);
 		require("fs").mkdir("uploads/" + req.session.username + "/", err => {
 			cb(null, "./uploads/" + req.session.username + "/");
 		});
@@ -77,6 +78,7 @@ app.use(helmet());
 app.use(logger("dev"));
 app.use(express.static(path.join(config.root, "/uploads")));
 // app.use(favicon(path.join(config.root, "static/img/favicon.png")));
+//
 app.use(
 	session({
 		secret: "2tb678978tc786r3tn78789rwrb7r3t70 r3bt789n0cwtn89w0890xbt0r3qt78br3b78r378qr3b73Q",
@@ -84,12 +86,32 @@ app.use(
 			host: "localhost",
 			port: 6379,
 			client: client,
-			ttl: 260
+			disableTTL: true,
+			logErrors: true
 		}),
 		saveUninitialized: false,
 		resave: false
 	})
 );
+
+import User from "./model/userModel";
+
+// const isAuthenticated = (req, res, next) => {
+// 	const sessionKey = req.session.username;
+// 	console.log("session", sessionKey);
+// 	User.findOne({ username: sessionKey }, function(error, obj) {
+// 		console.log(obj);
+// 		if (obj != null) {
+// 			next();
+// 		} else {
+// 			return res.json({
+// 				success: false,
+// 				message: "User not logged in",
+// 				error: error
+// 			});
+// 		}
+// 	});
+// };
 
 // NOTE - Use routes
 app.use("/uploads", express.static(__dirname + "/uploads"));
@@ -105,7 +127,8 @@ app.post("/api/remove", afflictionController.remove);
 
 app.get("/", (req, res) => {
 	res.json({
-		error: "oops.."
+		success: true,
+		message: { req }
 	});
 });
 
@@ -124,11 +147,10 @@ app.use((err, req, res, next) => {
 	const sc = err.status || 500;
 
 	res.json({
-		error: {
-			status: res.status(sc).stringify,
-			message: err.message,
-			stack: config.env === "development" ? err.stack : ""
-		}
+		success: false,
+		status: res.status(sc).stringify,
+		message: err.message,
+		stack: config.env === "development" ? err.stack : ""
 	});
 });
 
